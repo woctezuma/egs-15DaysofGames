@@ -45,7 +45,9 @@ Data leaks:
 -   [`egs-datamining`][egs-datamining]: datamining of Epic Games Store (EGS),
 -   [`geforce-leak`][geforce-leak]: datamining of Nvidia's GeForce NOW (GFN),
 
+GraphQL advice:
 
+-   A few [pieces of advice][wiki-graphQL] regarding GraphQL.
 
 <!-- Definitions -->
 
@@ -61,6 +63,7 @@ Data leaks:
 [python-download-url]: <https://www.python.org/downloads/>
 
 [wiki-results]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Upcoming-Promotions>
+[wiki-graphql]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/GraphQL>
 
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
 [egs-api-graphql]: <https://github.com/Tectors/EpicGraphql>

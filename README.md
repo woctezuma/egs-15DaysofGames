@@ -29,6 +29,10 @@ To filter promotions to focus on potential free games:
 python filter_promotions.py
 ```
 
+## Results
+
+Results are shown [on the Wiki][wiki-results].
+
 ## References
 
 API documentation:
@@ -55,6 +59,8 @@ Data leaks:
 [codacy-image]: <https://api.codacy.com/project/badge/Grade/3c06156df0dc4e26956e1dd9c17cb57b>
 
 [python-download-url]: <https://www.python.org/downloads/>
+
+[wiki-results]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Upcoming-Promotions>
 
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
 [egs-api-graphql]: <https://github.com/Tectors/EpicGraphql>

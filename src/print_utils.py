@@ -36,7 +36,7 @@ def print_promos(filtered_promos):
 
         print(f"- [ {discount:2d}% off ] {start_date} -> {end_date} : {name}")
 
-    return
+    return True
 
 
 if __name__ == "__main__":

@@ -199,7 +199,9 @@ class TestSortUtilsMethods(TestCase):
             },
         ]
 
-        sorted_promos = src.sort_utils.get_sorted_promos(dummy_promos)
+        sorted_promos = src.sort_utils.get_sorted_promos(
+            dummy_promos, check_upcoming_promos
+        )
 
         s = ""
         for i in range(len(sorted_promos)):

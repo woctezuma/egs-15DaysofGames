@@ -4,5 +4,8 @@ from src.print_utils import print_promos
 
 if __name__ == "__main__":
     all_promos = load_promos()
-    filtered_promos = filter_promos(all_promos)
-    print_promos(filtered_promos)
+    check_upcoming_promos = True
+    filtered_promos = filter_promos(
+        all_promos, check_upcoming_promos=check_upcoming_promos
+    )
+    print_promos(filtered_promos, check_upcoming_promos=check_upcoming_promos)

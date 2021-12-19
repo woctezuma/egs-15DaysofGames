@@ -1,3 +1,6 @@
+import re
+
+
 def find_title(promos: list[dict], target_game_name: str, verbose: bool = True) -> dict:
     target_game_name_lowercase = target_game_name.lower()
 
@@ -12,6 +15,22 @@ def find_title(promos: list[dict], target_game_name: str, verbose: bool = True) 
         print(result)
 
     return result
+
+
+def find_title_regex(
+    promos: list[dict], target_game_name: str, verbose: bool = True
+) -> list[dict]:
+    """Regex search for all matches of a game title. Credits to KonScanner."""
+    matches = [
+        e
+        for e in promos
+        if target_game_name in re.search(target_game_name, e["title"], re.IGNORECASE)
+    ]
+
+    if verbose:
+        print(matches)
+
+    return matches
 
 
 if __name__ == "__main__":

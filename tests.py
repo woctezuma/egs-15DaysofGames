@@ -149,7 +149,28 @@ class TestIOUtilsMethods(TestCase):
 
 class TestSortUtilsMethods(TestCase):
     def test_sanitize_promos(self):
-        pass
+        for promo_str in ["upcomingPromotionalOffers", "promotionalOffers"]:
+            l = [
+                {
+                    "promotions": {
+                        promo_str: [{"promotionalOffers": [{"endDate": None}]}]
+                    }
+                },
+                {
+                    "promotions": {
+                        promo_str: [{"promotionalOffers": [{"endDate": "hello"}]}]
+                    }
+                },
+            ]
+            s = src.sort_utils.sanitize_promos(l)
+            self.assertEqual(
+                s[0]["promotions"][promo_str][0]["promotionalOffers"][0]["endDate"],
+                "N/A",
+            )
+            self.assertEqual(
+                s[1]["promotions"][promo_str][0]["promotionalOffers"][0]["endDate"],
+                "hello",
+            )
 
     def test_get_sorted_promos(self):
         dummy_promos = [

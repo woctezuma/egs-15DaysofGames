@@ -2,6 +2,7 @@ import re
 
 
 def find_title(promos: list[dict], target_game_name: str, verbose: bool = True) -> dict:
+    """Search for the first match of a game title."""
     target_game_name_lowercase = target_game_name.lower()
 
     result = None

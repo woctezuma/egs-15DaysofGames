@@ -1,11 +1,11 @@
 import requests
 
 
-def get_egs_url():
+def get_egs_url() -> str:
     return "https://www.epicgames.com/graphql"
 
 
-def get_default_params():
+def get_default_params() -> dict:
     params = {
         "category": '"games"',
         "count": 1000,
@@ -13,7 +13,7 @@ def get_default_params():
     return params
 
 
-def get_egs_query(cursor=0, step=None):
+def get_egs_query(cursor: int = 0, step: int = None) -> str:
     params = get_default_params()
 
     if step is None:
@@ -37,7 +37,9 @@ def get_egs_query(cursor=0, step=None):
     return query
 
 
-def download_store_data(cursor=0, step=None, verbose=True):
+def download_store_data(
+        cursor: int = 0, step: int = None, verbose: bool = True
+) -> dict:
     if verbose:
         print(f"Cursor = {cursor} ; step = {step}")
 

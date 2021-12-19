@@ -1,7 +1,7 @@
 from src.filter_utils import get_promo_str
 
 
-def sanitize_promos(promos):
+def sanitize_promos(promos: list[dict]) -> list[dict]:
     sanitized_promos = []
 
     for e in promos:
@@ -15,7 +15,7 @@ def sanitize_promos(promos):
     return sanitized_promos
 
 
-def get_sorted_promos(promos, check_upcoming_promos):
+def get_sorted_promos(promos: list[dict], check_upcoming_promos: bool) -> list[dict]:
     promo_str = get_promo_str(check_upcoming_promos)
 
     sanitized_promos = sanitize_promos(promos)

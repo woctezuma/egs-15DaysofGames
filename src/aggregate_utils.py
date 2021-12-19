@@ -1,17 +1,17 @@
 from src.download_utils import get_default_params, download_store_data
 
 
-def extract_upcoming_promotions(store_data):
+def extract_upcoming_promotions(store_data: dict) -> list[dict]:
     promos = store_data["elements"]
     return promos
 
 
-def extract_num_promos_from_metadata(store_data):
+def extract_num_promos_from_metadata(store_data: dict) -> int:
     total_num_promos = store_data["paging"]["total"]
     return total_num_promos
 
 
-def download_all_promos(verbose=True):
+def download_all_promos(verbose: bool = True) -> list[dict]:
     dummy_store_data = download_store_data(cursor=0, step=1, verbose=verbose)
     total_num_promos = extract_num_promos_from_metadata(dummy_store_data)
 

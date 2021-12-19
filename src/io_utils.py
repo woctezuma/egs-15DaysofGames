@@ -1,12 +1,12 @@
 import json
 
 
-def get_output_filename():
+def get_output_filename() -> str:
     fname = "data/promos.json"
     return fname
 
 
-def load_promos(fname=None):
+def load_promos(fname: str = None) -> list[dict]:
     if fname is None:
         fname = get_output_filename()
 
@@ -16,7 +16,7 @@ def load_promos(fname=None):
     return data
 
 
-def save_promos(data, fname=None):
+def save_promos(data: list[dict], fname: str = None) -> None:
     if fname is None:
         fname = get_output_filename()
 

@@ -23,8 +23,9 @@ def get_egs_query(cursor=0, step=None):
     param_str = f'(category: {params["category"]}, count: {step}, start: {cursor})'
 
     promo_template = "{promotionalOffers {startDate endDate discountSetting {discountType discountPercentage} } }"
+    current_promo = f"promotionalOffers {promo_template}"
     upcoming_promo = f"upcomingPromotionalOffers {promo_template}"
-    promo_str = "promotions {" + upcoming_promo + "}"
+    promo_str = "promotions {" + f"{current_promo} {upcoming_promo}" + "}"
 
     paging_str = "paging {count total}"
     element_str = "elements {" + f"title {promo_str}" + "}"

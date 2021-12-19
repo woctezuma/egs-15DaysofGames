@@ -151,8 +151,16 @@ class TestPrintUtilsMethods(TestCase):
         self.assertEqual(src.print_utils.get_meta_data(element), "hello")
 
     def test_trim_date(self):
-        dummy_date = "2021-12-18-hello"
-        self.assertEqual(src.print_utils.trim_date(dummy_date), "2021-12-18")
+        dummy_date = "2021-12-18T16:00:00.000Z"
+        self.assertEqual(src.print_utils.trim_date(dummy_date), "2021-12-18 @ 16h")
+
+    def test_extract_hour(self):
+        dummy_date = "2021-12-18T16:00:00.000Z"
+        self.assertEqual(src.print_utils.extract_hour(dummy_date), "16")
+
+    def test_extract_day(self):
+        dummy_date = "2021-12-18T16:00:00.000Z"
+        self.assertEqual(src.print_utils.extract_day(dummy_date), "2021-12-18")
 
     def test_print_promos(self):
         promos = src.io_utils.load_promos()

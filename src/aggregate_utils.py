@@ -1,4 +1,5 @@
 from src.download_utils import get_default_params, download_store_data
+from src.search_utils import find_title
 
 
 def extract_upcoming_promotions(store_data: dict) -> list[dict]:
@@ -37,9 +38,4 @@ if __name__ == "__main__":
     promos = extract_upcoming_promotions(store_data)
 
     target_game_name = "Prey"
-    target_game_name_lowercase = target_game_name.lower()
-
-    for e in promos:
-        if target_game_name_lowercase in e["title"].lower():
-            print(e)
-            break
+    element = find_title(promos, target_game_name, verbose=True)

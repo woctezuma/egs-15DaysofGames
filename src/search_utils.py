@@ -25,7 +25,7 @@ def find_title_regex(
     matches = [
         e
         for e in promos
-        if target_game_name in re.search(target_game_name, e["title"], re.IGNORECASE)
+        if re.search(target_game_name, e["title"], re.IGNORECASE) is not None
     ]
 
     if verbose:

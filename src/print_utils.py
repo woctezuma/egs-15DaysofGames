@@ -1,16 +1,4 @@
-def get_sorted_promos(promos):
-    sorted_promos = sorted(
-        promos,
-        key=lambda x: (
-            x["promotions"]["upcomingPromotionalOffers"][0]["promotionalOffers"][0][
-                "endDate"
-            ],
-            x["promotions"]["upcomingPromotionalOffers"][0]["promotionalOffers"][0][
-                "startDate"
-            ],
-        ),
-    )
-    return sorted_promos
+from src.sort_utils import get_sorted_promos
 
 
 def get_meta_data(element):

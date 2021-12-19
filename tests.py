@@ -270,3 +270,14 @@ class TestSearchUtilsMethods(TestCase):
         element = src.search_utils.find_title(promos, target_game_name, verbose=True)
         self.assertIsNotNone(element)
         self.assertIn(target_game_name, element["title"])
+
+    def test_find_title_regex(self):
+        promos = src.io_utils.load_promos()
+        target_game_name = "Prey"
+        matches = src.search_utils.find_title_regex(
+            promos, target_game_name, verbose=True
+        )
+        self.assertIsNotNone(matches)
+        self.assertGreater(len(matches), 0)
+        for element in matches:
+            self.assertIn(target_game_name, element["title"])

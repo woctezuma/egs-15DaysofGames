@@ -22,6 +22,14 @@ def get_meta_data(element):
 
 
 def trim_date(date_str):
+    return f"{extract_day(date_str)} @ {extract_hour(date_str)}h"
+
+
+def extract_hour(date_str):
+    return date_str[11:13]
+
+
+def extract_day(date_str):
     return date_str[:10]
 
 

@@ -6,6 +6,8 @@ def sanitize_promos(promos):
 
     for e in promos:
         for s in e["promotions"]:
+            if len(e["promotions"][s]) == 0:
+                continue
             if e["promotions"][s][0]["promotionalOffers"][0]["endDate"] is None:
                 e["promotions"][s][0]["promotionalOffers"][0]["endDate"] = "N/A"
         sanitized_promos.append(e)

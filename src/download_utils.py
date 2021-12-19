@@ -21,9 +21,18 @@ def get_egs_query(cursor=0, step=None):
 
     prefix = "{Catalog {searchStore"
     param_str = f'(category: {params["category"]}, count: {step}, start: {cursor})'
-    suffix = " {paging {count total} elements {title promotions {upcomingPromotionalOffers {promotionalOffers {startDate endDate discountSetting {discountType discountPercentage} } } } } } } }"
 
-    query = prefix + param_str + suffix
+    promo_template = "{promotionalOffers {startDate endDate discountSetting {discountType discountPercentage} } }"
+    upcoming_promo = f"upcomingPromotionalOffers {promo_template}"
+    promo_str = "promotions {" + upcoming_promo + "}"
+
+    paging_str = "paging {count total}"
+    element_str = "elements {" + f"title {promo_str}" + "}"
+
+    content_str = "{" + f"{paging_str} {element_str}" + "}"
+    suffix = "}}"
+
+    query = prefix + param_str + content_str + suffix
     return query
 
 

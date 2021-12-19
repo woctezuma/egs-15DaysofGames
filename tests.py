@@ -50,27 +50,81 @@ class TestDownloadUtilsMethods(TestCase):
 
 
 class TestFilterUtilsMethods(TestCase):
-    def test_has_upcoming_promo(self):
+    def get_dummy_current_promo(self):
+        element = {
+            "promotions": {"promotionalOffers": ["this is currently discounted!"]}
+        }
+        return element
+
+    def get_dummy_upcoming_promo(self):
         element = {
             "promotions": {"upcomingPromotionalOffers": ["this will be discounted!"]}
         }
+        return element
+
+    def test_get_promo_str(self):
+        self.assertEqual(
+            src.filter_utils.get_promo_str(check_upcoming_promos=True),
+            "upcomingPromotionalOffers",
+        )
+        self.assertEqual(
+            src.filter_utils.get_promo_str(check_upcoming_promos=False),
+            "promotionalOffers",
+        )
+
+    def test_is_relevant_promo(self):
+        element = self.get_dummy_current_promo()
+        self.assertFalse(src.filter_utils.is_relevant_promo(element, True))
+        self.assertTrue(src.filter_utils.is_relevant_promo(element, False))
+        element = self.get_dummy_upcoming_promo()
+        self.assertTrue(src.filter_utils.is_relevant_promo(element, True))
+        self.assertFalse(src.filter_utils.is_relevant_promo(element, False))
+
+    def test_has_current_promo(self):
+        element = self.get_dummy_current_promo()
+        self.assertTrue(src.filter_utils.has_current_promo(element))
+        element = self.get_dummy_upcoming_promo()
+        self.assertFalse(src.filter_utils.has_current_promo(element))
+        element = {"promotions": None}
+        self.assertFalse(src.filter_utils.has_current_promo(element))
+        element = {"promotions": {"promotionalOffers": []}}
+        self.assertFalse(src.filter_utils.has_current_promo(element))
+        element = {"promotions": {"upcomingPromotionalOffers": []}}
+        self.assertFalse(src.filter_utils.has_current_promo(element))
+
+    def test_has_upcoming_promo(self):
+        element = self.get_dummy_current_promo()
+        self.assertFalse(src.filter_utils.has_upcoming_promo(element))
+        element = self.get_dummy_upcoming_promo()
         self.assertTrue(src.filter_utils.has_upcoming_promo(element))
         element = {"promotions": None}
+        self.assertFalse(src.filter_utils.has_upcoming_promo(element))
+        element = {"promotions": {"promotionalOffers": []}}
         self.assertFalse(src.filter_utils.has_upcoming_promo(element))
         element = {"promotions": {"upcomingPromotionalOffers": []}}
         self.assertFalse(src.filter_utils.has_upcoming_promo(element))
 
     def test_filter_promos(self):
         promos = [
-            {"promotions": {"upcomingPromotionalOffers": ["this will be discounted!"]}},
+            self.get_dummy_current_promo(),
+            self.get_dummy_upcoming_promo(),
             {"promotions": None},
+            {"promotions": {"promotionalOffers": []}},
             {"promotions": {"upcomingPromotionalOffers": []}},
         ]
         expected_filtered_promos = [
-            {"promotions": {"upcomingPromotionalOffers": ["this will be discounted!"]}}
+            self.get_dummy_upcoming_promo(),
         ]
         self.assertListEqual(
-            src.filter_utils.filter_promos(promos), expected_filtered_promos
+            src.filter_utils.filter_promos(promos, check_upcoming_promos=True),
+            expected_filtered_promos,
+        )
+        expected_filtered_promos = [
+            self.get_dummy_current_promo(),
+        ]
+        self.assertListEqual(
+            src.filter_utils.filter_promos(promos, check_upcoming_promos=False),
+            expected_filtered_promos,
         )
 
 

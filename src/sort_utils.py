@@ -2,6 +2,13 @@ from src.filter_utils import get_promo_str
 
 
 def sanitize_promos(promos):
+    """
+    Filter promotions.
+
+    args: promos: List[dict]
+
+    Returns: Filtered promotions.
+    """
     sanitized_promos = []
 
     for e in promos:
@@ -16,6 +23,13 @@ def sanitize_promos(promos):
 
 
 def get_sorted_promos(promos, check_upcoming_promos):
+    """
+    Sort promotions.
+
+    args: promos: List[dict], check_upcoming_promos: bool
+
+    Returns: Sorted promotions.
+    """
     promo_str = get_promo_str(check_upcoming_promos)
 
     sanitized_promos = sanitize_promos(promos)

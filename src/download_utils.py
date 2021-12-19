@@ -2,10 +2,18 @@ import requests
 
 
 def get_egs_url():
+    """
+    URL for EGS API.
+    """
     return "https://www.epicgames.com/graphql"
 
 
 def get_default_params():
+    """
+    Default parameters for EGS API.
+
+    Returns: dict
+    """
     params = {
         "category": '"games"',
         "count": 1000,
@@ -14,6 +22,13 @@ def get_default_params():
 
 
 def get_egs_query(cursor=0, step=None):
+    """
+    Get EGS query.
+
+    args: cursor: int, step: int
+
+    Returns query.
+    """
     params = get_default_params()
 
     if step is None:
@@ -38,6 +53,13 @@ def get_egs_query(cursor=0, step=None):
 
 
 def download_store_data(cursor=0, step=None, verbose=True):
+    """
+    Downloads store data.
+
+    args: cursor: int, step: int, verbose: bool
+
+    Returns store data.
+    """
     if verbose:
         print(f"Cursor = {cursor} ; step = {step}")
 

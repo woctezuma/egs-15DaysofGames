@@ -5,6 +5,7 @@ import src.download_utils
 import src.filter_utils
 import src.io_utils
 import src.print_utils
+import src.search_utils
 import src.sort_utils
 
 
@@ -267,3 +268,12 @@ class TestPrintUtilsMethods(TestCase):
                     filtered_promos, check_upcoming_promos=check_upcoming_promos
                 )
             )
+
+
+class TestSearchUtilsMethods(TestCase):
+    def test_find_title(self):
+        promos = src.io_utils.load_promos()
+        target_game_name = "Prey"
+        element = src.search_utils.find_title(promos, target_game_name, verbose=True)
+        self.assertIsNotNone(element)
+        self.assertIn(target_game_name, element["title"])

@@ -213,17 +213,10 @@ class TestSortUtilsMethods(TestCase):
             )
 
             s = ""
-            for i in range(len(sorted_promos)):
-                s += str(
-                    sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][
-                        0
-                    ]["startDate"]
-                )
-                s += str(
-                    sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][
-                        0
-                    ]["endDate"]
-                )
+            for element in sorted_promos:
+                calendar = element["promotions"][promo_str][0]["promotionalOffers"][0]
+                s += str(calendar["startDate"])
+                s += str(calendar["endDate"])
 
             self.assertEqual(s, "00100111")
 

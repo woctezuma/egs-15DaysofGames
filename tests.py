@@ -173,50 +173,58 @@ class TestSortUtilsMethods(TestCase):
             )
 
     def test_get_sorted_promos(self):
-        check_upcoming_promos = True
-        promo_str = src.filter_utils.get_promo_str(check_upcoming_promos)
+        for check_upcoming_promos in [True, False]:
+            promo_str = src.filter_utils.get_promo_str(check_upcoming_promos)
 
-        dummy_promos = [
-            {
-                "promotions": {
-                    promo_str: [{"promotionalOffers": [{"startDate": 0, "endDate": 0}]}]
-                }
-            },
-            {
-                "promotions": {
-                    promo_str: [{"promotionalOffers": [{"startDate": 0, "endDate": 1}]}]
-                }
-            },
-            {
-                "promotions": {
-                    promo_str: [{"promotionalOffers": [{"startDate": 1, "endDate": 0}]}]
-                }
-            },
-            {
-                "promotions": {
-                    promo_str: [{"promotionalOffers": [{"startDate": 1, "endDate": 1}]}]
-                }
-            },
-        ]
+            dummy_promos = [
+                {
+                    "promotions": {
+                        promo_str: [
+                            {"promotionalOffers": [{"startDate": 0, "endDate": 0}]}
+                        ]
+                    }
+                },
+                {
+                    "promotions": {
+                        promo_str: [
+                            {"promotionalOffers": [{"startDate": 0, "endDate": 1}]}
+                        ]
+                    }
+                },
+                {
+                    "promotions": {
+                        promo_str: [
+                            {"promotionalOffers": [{"startDate": 1, "endDate": 0}]}
+                        ]
+                    }
+                },
+                {
+                    "promotions": {
+                        promo_str: [
+                            {"promotionalOffers": [{"startDate": 1, "endDate": 1}]}
+                        ]
+                    }
+                },
+            ]
 
-        sorted_promos = src.sort_utils.get_sorted_promos(
-            dummy_promos, check_upcoming_promos
-        )
-
-        s = ""
-        for i in range(len(sorted_promos)):
-            s += str(
-                sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][0][
-                    "startDate"
-                ]
-            )
-            s += str(
-                sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][0][
-                    "endDate"
-                ]
+            sorted_promos = src.sort_utils.get_sorted_promos(
+                dummy_promos, check_upcoming_promos
             )
 
-        self.assertEqual(s, "00100111")
+            s = ""
+            for i in range(len(sorted_promos)):
+                s += str(
+                    sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][
+                        0
+                    ]["startDate"]
+                )
+                s += str(
+                    sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][
+                        0
+                    ]["endDate"]
+                )
+
+            self.assertEqual(s, "00100111")
 
 
 class TestPrintUtilsMethods(TestCase):

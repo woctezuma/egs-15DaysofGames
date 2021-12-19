@@ -5,6 +5,7 @@ import src.download_utils
 import src.filter_utils
 import src.io_utils
 import src.print_utils
+import src.sort_utils
 
 
 class TestAggregateUtilsMethods(TestCase):
@@ -146,7 +147,10 @@ class TestIOUtilsMethods(TestCase):
         self.assertListEqual(promos, dummy_promos)
 
 
-class TestPrintUtilsMethods(TestCase):
+class TestSortUtilsMethods(TestCase):
+    def test_sanitize_promos(self):
+        pass
+
     def test_get_sorted_promos(self):
         dummy_promos = [
             {
@@ -179,7 +183,7 @@ class TestPrintUtilsMethods(TestCase):
             },
         ]
 
-        sorted_promos = src.print_utils.get_sorted_promos(dummy_promos)
+        sorted_promos = src.sort_utils.get_sorted_promos(dummy_promos)
 
         s = ""
         for i in range(len(sorted_promos)):
@@ -196,6 +200,8 @@ class TestPrintUtilsMethods(TestCase):
 
         self.assertEqual(s, "00100111")
 
+
+class TestPrintUtilsMethods(TestCase):
     def test_get_meta_data(self):
         element = {
             "promotions": {

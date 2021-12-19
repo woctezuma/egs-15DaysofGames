@@ -173,33 +173,28 @@ class TestSortUtilsMethods(TestCase):
             )
 
     def test_get_sorted_promos(self):
+        check_upcoming_promos = True
+        promo_str = src.filter_utils.get_promo_str(check_upcoming_promos)
+
         dummy_promos = [
             {
                 "promotions": {
-                    "upcomingPromotionalOffers": [
-                        {"promotionalOffers": [{"startDate": 0, "endDate": 0}]}
-                    ]
+                    promo_str: [{"promotionalOffers": [{"startDate": 0, "endDate": 0}]}]
                 }
             },
             {
                 "promotions": {
-                    "upcomingPromotionalOffers": [
-                        {"promotionalOffers": [{"startDate": 0, "endDate": 1}]}
-                    ]
+                    promo_str: [{"promotionalOffers": [{"startDate": 0, "endDate": 1}]}]
                 }
             },
             {
                 "promotions": {
-                    "upcomingPromotionalOffers": [
-                        {"promotionalOffers": [{"startDate": 1, "endDate": 0}]}
-                    ]
+                    promo_str: [{"promotionalOffers": [{"startDate": 1, "endDate": 0}]}]
                 }
             },
             {
                 "promotions": {
-                    "upcomingPromotionalOffers": [
-                        {"promotionalOffers": [{"startDate": 1, "endDate": 1}]}
-                    ]
+                    promo_str: [{"promotionalOffers": [{"startDate": 1, "endDate": 1}]}]
                 }
             },
         ]
@@ -209,14 +204,14 @@ class TestSortUtilsMethods(TestCase):
         s = ""
         for i in range(len(sorted_promos)):
             s += str(
-                sorted_promos[i]["promotions"]["upcomingPromotionalOffers"][0][
-                    "promotionalOffers"
-                ][0]["startDate"]
+                sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][0][
+                    "startDate"
+                ]
             )
             s += str(
-                sorted_promos[i]["promotions"]["upcomingPromotionalOffers"][0][
-                    "promotionalOffers"
-                ][0]["endDate"]
+                sorted_promos[i]["promotions"][promo_str][0]["promotionalOffers"][0][
+                    "endDate"
+                ]
             )
 
         self.assertEqual(s, "00100111")

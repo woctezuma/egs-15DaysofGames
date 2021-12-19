@@ -162,6 +162,10 @@ class TestPrintUtilsMethods(TestCase):
         dummy_date = "2021-12-18T16:00:00.000Z"
         self.assertEqual(src.print_utils.extract_day(dummy_date), "2021-12-18")
 
+    def test_to_discount_symbol(self):
+        self.assertEqual(src.print_utils.to_discount_symbol("PERCENTAGE"), "%")
+        self.assertEqual(src.print_utils.to_discount_symbol("DUMMY_UNKNOWN"), "???")
+
     def test_print_promos(self):
         promos = src.io_utils.load_promos()
         filtered_promos = src.filter_utils.filter_promos(promos)

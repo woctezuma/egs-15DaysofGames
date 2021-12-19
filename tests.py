@@ -229,7 +229,11 @@ class TestPrintUtilsMethods(TestCase):
                 "upcomingPromotionalOffers": [{"promotionalOffers": ["hello"]}]
             }
         }
-        self.assertEqual(src.print_utils.get_meta_data(element), "hello")
+        self.assertEqual(src.print_utils.get_meta_data(element, True), "hello")
+        element = {
+            "promotions": {"promotionalOffers": [{"promotionalOffers": ["hello"]}]}
+        }
+        self.assertEqual(src.print_utils.get_meta_data(element, False), "hello")
 
     def test_trim_date(self):
         dummy_date = "2021-12-18T16:00:00.000Z"
@@ -249,5 +253,12 @@ class TestPrintUtilsMethods(TestCase):
 
     def test_print_promos(self):
         promos = src.io_utils.load_promos()
-        filtered_promos = src.filter_utils.filter_promos(promos)
-        self.assertTrue(src.print_utils.print_promos(filtered_promos))
+        for check_upcoming_promos in [True, False]:
+            filtered_promos = src.filter_utils.filter_promos(
+                promos, check_upcoming_promos=check_upcoming_promos
+            )
+            self.assertTrue(
+                src.print_utils.print_promos(
+                    filtered_promos, check_upcoming_promos=check_upcoming_promos
+                )
+            )

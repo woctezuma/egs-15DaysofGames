@@ -37,8 +37,8 @@ Results are shown [on the Wiki][wiki-results].
 
 API documentation:
 
-- [`SD4RK/epicstore_api`][egs-api-python]: a Python wrapper for the EGS API,
-- [`Tectors/EpicGraphql`][egs-api-graphql]: a documentation of GraphQL queries for the EGS API,
+-   [`SD4RK/epicstore_api`][egs-api-python]: a Python wrapper for the EGS API,
+-   [`Tectors/EpicGraphql`][egs-api-graphql]: a documentation of GraphQL queries for the EGS API,
 
 Data leaks:
 

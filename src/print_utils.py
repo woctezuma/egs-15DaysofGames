@@ -1,10 +1,10 @@
+from src.filter_utils import get_promo_str
 from src.sort_utils import get_sorted_promos
 
 
-def get_meta_data(element):
-    meta_data = element["promotions"]["upcomingPromotionalOffers"][0][
-        "promotionalOffers"
-    ][0]
+def get_meta_data(element, check_upcoming_promos):
+    promo_str = get_promo_str(check_upcoming_promos)
+    meta_data = element["promotions"][promo_str][0]["promotionalOffers"][0]
 
     return meta_data
 
@@ -29,10 +29,10 @@ def to_discount_symbol(discount_type):
     return discount_symbol
 
 
-def print_promos(filtered_promos):
-    for e in get_sorted_promos(filtered_promos):
+def print_promos(filtered_promos, check_upcoming_promos=True):
+    for e in get_sorted_promos(filtered_promos, check_upcoming_promos):
         name = e["title"]
-        meta_data = get_meta_data(e)
+        meta_data = get_meta_data(e, check_upcoming_promos)
 
         start_date = trim_date(meta_data["startDate"])
         end_date = trim_date(meta_data["endDate"])

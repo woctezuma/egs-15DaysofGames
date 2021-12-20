@@ -158,42 +158,63 @@ class TestSortUtilsMethods(TestCase):
             l = [
                 {
                     "promotions": {
-                        promo_str: [{"promotionalOffers": [{"endDate": None}]}]
+                        promo_str: [
+                            {
+                                "promotionalOffers": [
+                                    {"endDate": None, "startDate": "world"}
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "promotions": {
-                        promo_str: [{"promotionalOffers": [{"endDate": "hello"}]}]
+                        promo_str: [
+                            {
+                                "promotionalOffers": [
+                                    {"endDate": "hello", "startDate": "world"}
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "promotions": {
-                        promo_str: [{"promotionalOffers": [{"startDate": None}]}]
+                        promo_str: [
+                            {
+                                "promotionalOffers": [
+                                    {"endDate": "hello", "startDate": None}
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "promotions": {
-                        promo_str: [{"promotionalOffers": [{"startDate": "hello"}]}]
+                        promo_str: [
+                            {
+                                "promotionalOffers": [
+                                    {"endDate": None, "startDate": None}
+                                ]
+                            }
+                        ]
                     }
                 },
             ]
             s = src.sort_utils.sanitize_promos(l)
-            self.assertEqual(
-                s[0]["promotions"][promo_str][0]["promotionalOffers"][0]["endDate"],
-                "N/A",
-            )
-            self.assertEqual(
-                s[1]["promotions"][promo_str][0]["promotionalOffers"][0]["endDate"],
-                "hello",
-            )
-            self.assertEqual(
-                s[2]["promotions"][promo_str][0]["promotionalOffers"][0]["startDate"],
-                "N/A",
-            )
-            self.assertEqual(
-                s[3]["promotions"][promo_str][0]["promotionalOffers"][0]["startDate"],
-                "hello",
-            )
+            expected_results = [
+                {"endDate": "N/A", "startDate": "world"},
+                {"endDate": "hello", "startDate": "world"},
+                {"endDate": "hello", "startDate": "N/A"},
+                {"endDate": "N/A", "startDate": "N/A"},
+            ]
+            for (e, expected_output) in zip(s, expected_results):
+                for date_bound in ["endDate", "startDate"]:
+                    output = e["promotions"][promo_str][0]["promotionalOffers"][0]
+                    self.assertEqual(
+                        output[date_bound],
+                        expected_output[date_bound],
+                    )
 
     def test_get_sorted_promos(self):
         for check_upcoming_promos in [True, False]:

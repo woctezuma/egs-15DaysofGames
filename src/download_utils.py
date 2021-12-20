@@ -57,7 +57,7 @@ def download_store_data(
             store_data = data["data"]["Catalog"]["searchStore"]
         except TypeError:
             # Retry in case data is None
-            store_data = download_store_data(cursor=cursor, verbose=verbose)
+            store_data = download_store_data(cursor=cursor, step=step, verbose=verbose)
     else:
         store_data = {}
 

@@ -12,8 +12,10 @@ def extract_num_promos_from_metadata(store_data: dict) -> int:
     return total_num_promos
 
 
-def download_all_promos(verbose: bool = True) -> list[dict]:
-    dummy_store_data = download_store_data(cursor=0, step=1, verbose=verbose)
+def download_all_promos(include_dlc: bool = False, verbose: bool = True) -> list[dict]:
+    dummy_store_data = download_store_data(
+        cursor=0, step=1, include_dlc=include_dlc, verbose=verbose
+    )
     total_num_promos = extract_num_promos_from_metadata(dummy_store_data)
 
     if verbose:
@@ -25,7 +27,9 @@ def download_all_promos(verbose: bool = True) -> list[dict]:
     all_promos = []
 
     for cursor in range(0, total_num_promos, step):
-        store_data = download_store_data(cursor=cursor, step=step, verbose=verbose)
+        store_data = download_store_data(
+            cursor=cursor, step=step, include_dlc=include_dlc, verbose=verbose
+        )
         promos = extract_upcoming_promotions(store_data)
 
         all_promos += promos

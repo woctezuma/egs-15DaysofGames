@@ -23,8 +23,11 @@ class TestAggregateUtilsMethods(TestCase):
         )
 
     def test_download_all_promos(self):
-        all_promos = src.aggregate_utils.download_all_promos(verbose=True)
-        self.assertGreater(len(all_promos), 0)
+        for include_dlc in [False, True]:
+            all_promos = src.aggregate_utils.download_all_promos(
+                include_dlc=include_dlc, verbose=True
+            )
+            self.assertGreater(len(all_promos), 0)
 
 
 class TestDownloadUtilsMethods(TestCase):
@@ -44,11 +47,12 @@ class TestDownloadUtilsMethods(TestCase):
         self.assertIn("paging {count total}", query)
 
     def test_download_store_data(self):
-        store_data = src.download_utils.download_store_data(
-            cursor=0, step=1, verbose=True
-        )
-        self.assertIn("elements", store_data)
-        self.assertIn("paging", store_data)
+        for include_dlc in [False, True]:
+            store_data = src.download_utils.download_store_data(
+                cursor=0, step=1, include_dlc=include_dlc, verbose=True
+            )
+            self.assertIn("elements", store_data)
+            self.assertIn("paging", store_data)
 
 
 class TestFilterUtilsMethods(TestCase):

@@ -162,6 +162,16 @@ class TestSortUtilsMethods(TestCase):
                         promo_str: [{"promotionalOffers": [{"endDate": "hello"}]}]
                     }
                 },
+                {
+                    "promotions": {
+                        promo_str: [{"promotionalOffers": [{"startDate": None}]}]
+                    }
+                },
+                {
+                    "promotions": {
+                        promo_str: [{"promotionalOffers": [{"startDate": "hello"}]}]
+                    }
+                },
             ]
             s = src.sort_utils.sanitize_promos(l)
             self.assertEqual(
@@ -170,6 +180,14 @@ class TestSortUtilsMethods(TestCase):
             )
             self.assertEqual(
                 s[1]["promotions"][promo_str][0]["promotionalOffers"][0]["endDate"],
+                "hello",
+            )
+            self.assertEqual(
+                s[2]["promotions"][promo_str][0]["promotionalOffers"][0]["startDate"],
+                "N/A",
+            )
+            self.assertEqual(
+                s[3]["promotions"][promo_str][0]["promotionalOffers"][0]["startDate"],
                 "hello",
             )
 

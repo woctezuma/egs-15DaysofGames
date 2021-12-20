@@ -8,8 +8,9 @@ def sanitize_promos(promos: list[dict]) -> list[dict]:
         for s in e["promotions"]:
             if len(e["promotions"][s]) == 0:
                 continue
-            if e["promotions"][s][0]["promotionalOffers"][0]["endDate"] is None:
-                e["promotions"][s][0]["promotionalOffers"][0]["endDate"] = "N/A"
+            for date_bound in ["endDate", "startDate"]:
+                if e["promotions"][s][0]["promotionalOffers"][0][date_bound] is None:
+                    e["promotions"][s][0]["promotionalOffers"][0][date_bound] = "N/A"
         sanitized_promos.append(e)
 
     return sanitized_promos

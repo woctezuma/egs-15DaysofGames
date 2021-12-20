@@ -32,7 +32,3 @@ def find_title_regex(
         print(matches)
 
     return matches
-
-
-if __name__ == "__main__":
-    pass

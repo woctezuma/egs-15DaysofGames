@@ -44,7 +44,3 @@ def print_promos(
         print(f"- [ {discount:2d}{symbol} off ] {start_date} -> {end_date} : {name}")
 
     return True
-
-
-if __name__ == "__main__":
-    pass

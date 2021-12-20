@@ -29,7 +29,3 @@ def filter_promos(promos: list[dict], check_upcoming_promos: bool = True) -> lis
     filtered_promos = [e for e in promos if is_relevant_promo(e, check_upcoming_promos)]
 
     return filtered_promos
-
-
-if __name__ == "__main__":
-    pass

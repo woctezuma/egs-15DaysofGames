@@ -21,6 +21,11 @@ def extract_day(date_str: str) -> str:
     return date_str[:10]
 
 
+def to_discount_value(price_multiplier_in_percent: int) -> int:
+    discount_value = 100 - price_multiplier_in_percent
+    return discount_value
+
+
 def to_discount_symbol(discount_type: str) -> str:
     if discount_type == "PERCENTAGE":
         discount_symbol = "%"
@@ -38,7 +43,7 @@ def print_promos(
 
         start_date = trim_date(meta_data["startDate"])
         end_date = trim_date(meta_data["endDate"])
-        discount = meta_data["discountSetting"]["discountPercentage"]
+        discount = to_discount_value(meta_data["discountSetting"]["discountPercentage"])
         symbol = to_discount_symbol(meta_data["discountSetting"]["discountType"])
 
         print(f"- [ {discount:2d}{symbol} off ] {start_date} -> {end_date} : {name}")

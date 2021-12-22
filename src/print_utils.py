@@ -46,6 +46,6 @@ def print_promos(
         discount = to_discount_value(meta_data["discountSetting"]["discountPercentage"])
         symbol = to_discount_symbol(meta_data["discountSetting"]["discountType"])
 
-        print(f"- [ {discount:2d}{symbol} off ] {start_date} -> {end_date} : {name}")
+        print(f"- [ {discount:3d}{symbol} off ] {start_date} -> {end_date} : {name}")
 
     return True

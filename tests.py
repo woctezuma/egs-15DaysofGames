@@ -289,6 +289,10 @@ class TestPrintUtilsMethods(TestCase):
         dummy_date = "2021-12-18T16:00:00.000Z"
         self.assertEqual(src.print_utils.extract_day(dummy_date), "2021-12-18")
 
+    def test_to_discount_value(self):
+        for r in range(0, 101, 25):
+            self.assertEqual(100 - r, src.print_utils.to_discount_value(r))
+
     def test_to_discount_symbol(self):
         self.assertEqual(src.print_utils.to_discount_symbol("PERCENTAGE"), "%")
         self.assertEqual(src.print_utils.to_discount_symbol("DUMMY_UNKNOWN"), "???")

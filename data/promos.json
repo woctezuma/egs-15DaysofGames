@@ -701,10 +701,7 @@
     },
     {
         "title": "NautilusDevAudience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "SnapdragonDevAudience",
@@ -740,66 +737,6 @@
     },
     {
         "title": "Lumote",
-        "promotions": null
-    },
-    {
-        "title": "Annihilator Supporter Pack",
-        "promotions": null
-    },
-    {
-        "title": "Annihilator To Incinerator Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Annihilator To Ravager Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Imperator Supporter Pack",
-        "promotions": null
-    },
-    {
-        "title": "Imperator To Annihilator Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Imperator To Incinerator Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Imperator To Nullifier Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Imperator To Ravager Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Incinerator Supporter Pack",
-        "promotions": null
-    },
-    {
-        "title": "Nullifier Supporter Pack",
-        "promotions": null
-    },
-    {
-        "title": "Nullifier To Annihilator Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Nullifier To Incinerator Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Nullifier To Ravager Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Ravager Supporter Pack",
-        "promotions": null
-    },
-    {
-        "title": "Ravager To Incinerator Upgrade",
         "promotions": null
     },
     {
@@ -1357,49 +1294,29 @@
     {
         "title": "Control",
         "promotions": {
-            "promotionalOffers": [],
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-26T16:00:00.000Z",
+                            "endDate": "2021-12-27T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
+                            }
+                        }
+                    ]
+                }
+            ],
             "upcomingPromotionalOffers": []
         }
     },
     {
-        "title": "Core Abyss To Core Atlas Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Abyss To Core Harvest Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Breach To Core Abyss Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Breach To Core Atlas Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Breach To Core Harvest Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Delve To Core Abyss Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Delve To Core Atlas Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Delve To Core Breach Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Delve To Core Harvest Upgrade",
-        "promotions": null
-    },
-    {
-        "title": "Core Harvest To Core Atlas Upgrade",
-        "promotions": null
+        "title": "Control",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "CowbirdDevAudience",
@@ -1501,10 +1418,7 @@
     },
     {
         "title": "Delta DLC",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Deluxe Dev",
@@ -2160,10 +2074,7 @@
     },
     {
         "title": "Epsilon DLC",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "EscolarDevAudience",
@@ -2183,17 +2094,11 @@
     },
     {
         "title": "FalconDevAudience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "FalconDLC1StagingAudience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "FangtoothDevAudience",
@@ -2352,10 +2257,7 @@
     },
     {
         "title": "Gamma DLC",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Garlic Dev Audience",
@@ -2566,20 +2468,7 @@
         "title": "Loop Hero",
         "promotions": {
             "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-20T16:00:00.000Z",
-                            "endDate": "2021-12-21T16:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        }
-                    ]
-                }
-            ]
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -2696,8 +2585,7 @@
     {
         "title": "Mutant Year Zero: Road To Eden",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -2710,7 +2598,15 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
+        }
+    },
+    {
+        "title": "Mutant Year Zero: Road to Eden",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -2723,6 +2619,26 @@
     {
         "title": "My Time at Sandrock",
         "promotions": null
+    },
+    {
+        "title": "Mystery Game",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-27T16:00:00.000Z",
+                            "endDate": "2021-12-28T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "title": "NBA 2K21",
@@ -2771,10 +2687,7 @@
     },
     {
         "title": "NL DLC",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "No Straight Roads Demo",
@@ -2867,6 +2780,13 @@
         "promotions": null
     },
     {
+        "title": "Pathfinder: Kingmaker - Enhanced Plus Edition",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
+        }
+    },
+    {
         "title": "PeacockDevAudience",
         "promotions": null
     },
@@ -2937,6 +2857,13 @@
     {
         "title": "PrePurchase Content Dev",
         "promotions": null
+    },
+    {
+        "title": "Prey",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Promo_loots_week4 Audience",
@@ -3142,6 +3069,13 @@
         "promotions": null
     },
     {
+        "title": "Second Extinction™",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
+        }
+    },
+    {
         "title": "ServalGeneralAudience",
         "promotions": null
     },
@@ -3241,10 +3175,6 @@
     },
     {
         "title": "Silver PAS",
-        "promotions": null
-    },
-    {
-        "title": "SMITE CCB",
         "promotions": null
     },
     {
@@ -3543,20 +3473,7 @@
     {
         "title": "The Vanishing of Ethan Carter",
         "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-19T16:00:00.000Z",
-                            "endDate": "2021-12-20T16:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        }
-                    ]
-                }
-            ],
+            "promotionalOffers": [],
             "upcomingPromotionalOffers": []
         }
     },
@@ -3693,6 +3610,13 @@
     {
         "title": "Vampire: The Masquerade – Swansong",
         "promotions": null
+    },
+    {
+        "title": "Vampyr",
+        "promotions": {
+            "promotionalOffers": [],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Vanilla DEV Soundtrack",
@@ -5312,17 +5236,11 @@
     },
     {
         "title": "Celestial Outfit skin",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Samsung Preorder 15000 V-Bucks Promo",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Watch Dogs: Legion",
@@ -5498,16 +5416,12 @@
     },
     {
         "title": "Honor Guard",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Deadly Flight",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -5520,11 +5434,76 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Scarf",
+        "promotions": null
+    },
+    {
+        "title": "Annihilator Supporter Pack",
+        "promotions": null
+    },
+    {
+        "title": "Annihilator To Incinerator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Annihilator To Ravager Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Imperator Supporter Pack",
+        "promotions": null
+    },
+    {
+        "title": "Imperator To Annihilator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Imperator To Incinerator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Imperator To Nullifier Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Imperator To Ravager Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Incinerator Supporter Pack",
+        "promotions": null
+    },
+    {
+        "title": "Nullifier Supporter Pack",
+        "promotions": null
+    },
+    {
+        "title": "Nullifier To Annihilator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Nullifier To Incinerator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Nullifier To Ravager Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "Ravager Supporter Pack",
+        "promotions": null
+    },
+    {
+        "title": "Ravager To Incinerator Upgrade",
+        "promotions": null
+    },
+    {
+        "title": "SMITE Curious Courier Bundle",
         "promotions": null
     },
     {
@@ -5534,8 +5513,7 @@
     {
         "title": "Tiny Lands",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -5548,7 +5526,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -5557,50 +5536,15 @@
     },
     {
         "title": "Deep Freeze Bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "The Vanishing of Ethan Carter",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-19T16:00:00.000Z",
-                            "endDate": "2021-12-20T16:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Aspire Inas Tale",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-18T01:00:00.000Z",
-                            "endDate": "2021-12-25T00:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 75
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Dark Deity",
@@ -5631,10 +5575,6 @@
         "promotions": null
     },
     {
-        "title": "NARAKA: BLADEPOINT - FREE WEEKEND",
-        "promotions": null
-    },
-    {
         "title": "Sherlock Holmes Chapter One OST and Artbook",
         "promotions": null
     },
@@ -5656,30 +5596,11 @@
     },
     {
         "title": "Trash Sailors",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-16T17:00:00.000Z",
-                            "endDate": "2021-12-23T17:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 90
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "DLC 51",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "NARAKA: BLADEPOINT",
@@ -5692,7 +5613,7 @@
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 80
+                                "discountPercentage": 95
                             }
                         },
                         {
@@ -5700,7 +5621,7 @@
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 95
+                                "discountPercentage": 80
                             }
                         }
                     ]
@@ -5751,7 +5672,23 @@
     },
     {
         "title": "New Year Camo Collection",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-20T15:26:00.000Z",
+                            "endDate": "2022-01-06T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 63
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Of Bird And Cage",
@@ -5863,108 +5800,63 @@
     },
     {
         "title": "DLC 55",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "DLC 56",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "DLC 57",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Upgrade DLC 29",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Upgrade DLC 30",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Upgrade DLC 31",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Upgrade DLC 32",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Upgrade DLC 33",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Harrow Prime Access - Accessories Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Harrow Prime Access - Covenant Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Harrow Prime Access - Penance Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Harrow Prime Access - Thurible Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: The New War Invasion Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: The New War Reckoning Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: The New War Resistance Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Aeterna Noctis",
@@ -6012,23 +5904,7 @@
     },
     {
         "title": "Kingdoms of Amalur: Re-Reckoning - Fatesworn",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-14T15:00:00.000Z",
-                            "endDate": "2021-12-21T15:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 90
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "MORDHAU Editor",
@@ -6128,23 +6004,7 @@
     },
     {
         "title": "Firework",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-14T07:00:00.000Z",
-                            "endDate": "2021-12-21T07:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 80
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Firework Original Soundtrack",
@@ -6152,10 +6012,7 @@
     },
     {
         "title": "Voidlander Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Assassin's Creed® Valhalla: Dawn of Ragnarök",
@@ -6195,23 +6052,7 @@
     },
     {
         "title": "Street Striker",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-10T00:00:00.000Z",
-                            "endDate": "2021-12-24T00:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 75
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Bus Simulator 21 - Modding Kit",
@@ -6834,10 +6675,7 @@
     },
     {
         "title": "Robo-Kevin Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Titan Quest Anniversary Edition",
@@ -7729,10 +7567,7 @@
     },
     {
         "title": "Polar Legends Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "theHunter: Call of the Wild™",
@@ -8539,10 +8374,7 @@
     },
     {
         "title": "Tech Future Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Necromunda: Hired Gun - Gang Wars Cosmetics Bundle",
@@ -8926,10 +8758,7 @@
     },
     {
         "title": "HUMANKIND™ Demo",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "HOT WHEELS™ - AcceleRacers Deora™ II",
@@ -9000,24 +8829,15 @@
     },
     {
         "title": "Warframe: 15 Regal Aya - Prime Resurgence",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 3 Regal Aya - Prime Resurgence",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 7 Regal Aya - Prime Resurgence",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Surviving the Aftermath",
@@ -9126,8 +8946,7 @@
     {
         "title": "Dark Reflections Pack",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -9140,7 +8959,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -9775,8 +9595,7 @@
     {
         "title": "Football Manager 2022",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -9789,36 +9608,25 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Football Manager 2022 - In Game Editor",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Football Manager 2022 Demo",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Football Manager 2022 Editor",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Football Manager 2022 Resource Archiver",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Let's Build A Zoo",
@@ -10194,10 +10002,7 @@
     },
     {
         "title": "Minty Legends Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Tunche",
@@ -11007,7 +10812,23 @@
     },
     {
         "title": "They Always Run",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-25T00:00:00.000Z",
+                            "endDate": "2022-01-06T00:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 50
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "JARS",
@@ -12021,7 +11842,23 @@
     },
     {
         "title": "Rush Hour - London Commuter",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-20T16:09:00.000Z",
+                            "endDate": "2022-01-06T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 60
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Workshops Mega Pack",
@@ -13362,8 +13199,7 @@
     {
         "title": "Second Extinction™",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -13376,7 +13212,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -14170,19 +14007,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-12-20T08:00:00.000Z",
-                            "endDate": "2022-01-02T08:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 80
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 50
+                            }
+                        },
+                        {
+                            "startDate": "2021-12-20T08:00:00.000Z",
+                            "endDate": "2022-01-02T08:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 80
                             }
                         }
                     ]
@@ -14491,8 +14328,7 @@
     {
         "title": "Sky Racket",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -14505,7 +14341,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -15099,8 +14936,7 @@
     {
         "title": "Prey",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -15113,7 +14949,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -15226,73 +15063,43 @@
     },
     {
         "title": "Nidus Prime Accessories to Ravenous Pack\t",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Nidus Prime Parasitic Link + Accessories to Ravenous Pack\t",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Nidus Prime Parasitic Link to Ravenous Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Nidus Prime Virulence + Accessories to Ravenous Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Nidus Prime Virulence to Parasitic Link Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Nidus Prime Virulence to Ravenous Pack\t",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Nidus Prime Access - Accessories Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Nidus Prime Access - Ravenous Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Nidus Prime Access - Virulence Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Nidus Prime Access: Parasitic Link Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Encased",
@@ -16168,8 +15975,7 @@
     {
         "title": "HUMANKIND™ Digital Deluxe Edition",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -16182,14 +15988,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "HUMANKIND™ Digital Deluxe Upgrade",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -16202,7 +16008,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -16287,7 +16094,23 @@
     },
     {
         "title": "Rush Hour - Boston Sprinter",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-20T16:10:00.000Z",
+                            "endDate": "2022-01-06T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 60
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Train Sim World 2: Rush Hour Deluxe Edition",
@@ -16480,8 +16303,7 @@
     {
         "title": "HUMANKIND™ Standard Edition",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -16494,7 +16316,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -17599,7 +17422,23 @@
     },
     {
         "title": "Song of Farca",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-25T00:00:00.000Z",
+                            "endDate": "2022-01-06T00:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 50
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Death's Door",
@@ -18369,10 +18208,7 @@
     },
     {
         "title": "Upgrade DLC 22",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Ys IX: Monstrum Nox - Attachments Bundle",
@@ -19996,8 +19832,7 @@
     {
         "title": "Tennis Manager 2021",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20010,7 +19845,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -20649,16 +20485,12 @@
     },
     {
         "title": "Pathfinder Kingmaker - Arcane Unleashed",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Pathfinder: Kingmaker Beneath the Stolen Lands DLC",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20671,21 +20503,18 @@
                         }
                     ]
                 }
-            ]
-        }
-    },
-    {
-        "title": "Pathfinder: Kingmaker - Bloody Mess DLC",
-        "promotions": {
-            "promotionalOffers": [],
+            ],
             "upcomingPromotionalOffers": []
         }
     },
     {
+        "title": "Pathfinder: Kingmaker - Bloody Mess DLC",
+        "promotions": null
+    },
+    {
         "title": "Pathfinder: Kingmaker - Imperial Edition",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20698,14 +20527,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Pathfinder: Kingmaker - Enhanced Plus Edition",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20718,14 +20547,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Pathfinder Kingmaker - Royal Ascension DLC ",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20738,21 +20567,18 @@
                         }
                     ]
                 }
-            ]
-        }
-    },
-    {
-        "title": "Pathfinder: Kingmaker - Season Pass",
-        "promotions": {
-            "promotionalOffers": [],
+            ],
             "upcomingPromotionalOffers": []
         }
     },
     {
+        "title": "Pathfinder: Kingmaker - Season Pass",
+        "promotions": null
+    },
+    {
         "title": "Pathfinder: Kingmaker - The Wildcards DLC",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20765,14 +20591,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Pathfinder: Kingmaker - Varnhold's Lot DLC",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -20785,7 +20611,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -23809,6 +23636,14 @@
                 {
                     "promotionalOffers": [
                         {
+                            "startDate": "2021-12-21T16:00:00.000Z",
+                            "endDate": "2022-01-06T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 60
+                            }
+                        },
+                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
@@ -23819,20 +23654,7 @@
                     ]
                 }
             ],
-            "upcomingPromotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2021-12-21T16:00:00.000Z",
-                            "endDate": "2022-01-06T16:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 60
-                            }
-                        }
-                    ]
-                }
-            ]
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -24285,19 +24107,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-04-26T15:00:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 90
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 40
+                            }
+                        },
+                        {
+                            "startDate": "2021-04-26T15:00:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 90
                             }
                         }
                     ]
@@ -26427,19 +26249,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-10-26T16:00:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 50
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 20
+                            }
+                        },
+                        {
+                            "startDate": "2021-10-26T16:00:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 50
                             }
                         }
                     ]
@@ -27397,26 +27219,6 @@
         "promotions": null
     },
     {
-        "title": "Abyss Core Pack",
-        "promotions": null
-    },
-    {
-        "title": "Atlas Core Pack",
-        "promotions": null
-    },
-    {
-        "title": "Breach Core Pack",
-        "promotions": null
-    },
-    {
-        "title": "Delve Core Pack",
-        "promotions": null
-    },
-    {
-        "title": "Harvest Core Pack",
-        "promotions": null
-    },
-    {
         "title": "Dauntless - Skyhunter's Kit: Riptalon",
         "promotions": null
     },
@@ -28286,6 +28088,10 @@
     },
     {
         "title": "Warframe: 1000 Platinum + Rare Mod",
+        "promotions": null
+    },
+    {
+        "title": "Warframe: 1000 Platinum + Rare Mod",
         "promotions": {
             "promotionalOffers": [
                 {
@@ -28325,9 +28131,22 @@
         }
     },
     {
-        "title": "Warframe: 1000 Platinum + Rare Mod",
+        "title": "Warframe: 170 Platinum",
         "promotions": {
-            "promotionalOffers": [],
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2020-12-10T15:00:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 80
+                            }
+                        }
+                    ]
+                }
+            ],
             "upcomingPromotionalOffers": []
         }
     },
@@ -28353,30 +28172,7 @@
     },
     {
         "title": "Warframe: 170 Platinum",
-        "promotions": {
-            "promotionalOffers": [
-                {
-                    "promotionalOffers": [
-                        {
-                            "startDate": "2020-12-10T15:00:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 80
-                            }
-                        }
-                    ]
-                }
-            ],
-            "upcomingPromotionalOffers": []
-        }
-    },
-    {
-        "title": "Warframe: 170 Platinum",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 170 Platinum",
@@ -28500,10 +28296,7 @@
     },
     {
         "title": "Warframe: 2100 Platinum + Dual Rare Mods",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 2100 Platinum + Dual Rare Mods",
@@ -28727,10 +28520,7 @@
     },
     {
         "title": "Warframe: 370 Platinum",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 370 Platinum",
@@ -28743,7 +28533,7 @@
                             "endDate": null,
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 25
+                                "discountPercentage": 50
                             }
                         }
                     ]
@@ -28763,7 +28553,7 @@
                             "endDate": null,
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 50
+                                "discountPercentage": 25
                             }
                         }
                     ]
@@ -28914,10 +28704,7 @@
     },
     {
         "title": "Warframe: 4300 Platinum + Triple Rare Mod",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 75 Platinum",
@@ -29001,10 +28788,7 @@
     },
     {
         "title": "Warframe: 75 Platinum",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: 75 Platinum",
@@ -29240,23 +29024,16 @@
     },
     {
         "title": "Synkra Syandana",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warframe: Initiate Pack",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -29269,7 +29046,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -31711,8 +31489,7 @@
     {
         "title": "1000 ZEN Bundle",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -31725,14 +31502,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "10000 ZEN +1000 Bonus Bundle",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -31745,14 +31522,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "2000 ZEN Bundle",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -31765,14 +31542,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "20000 ZEN + 3000 Bonus Bundle",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -31785,14 +31562,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "5000 ZEN + 300 Bonus Bundle",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -31805,22 +31582,17 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Epic Starter Pack Bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Star Trek Online",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Assassin's Creed II Standard Edition",
@@ -32581,19 +32353,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-04-26T15:00:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 90
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 65
+                            }
+                        },
+                        {
+                            "startDate": "2021-04-26T15:00:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 90
                             }
                         }
                     ]
@@ -33313,7 +33085,7 @@
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 30
+                                "discountPercentage": 25
                             }
                         },
                         {
@@ -33321,7 +33093,7 @@
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
-                                "discountPercentage": 25
+                                "discountPercentage": 30
                             }
                         }
                     ]
@@ -34101,16 +33873,16 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-12-16T16:00:00.000Z",
-                            "endDate": "2022-01-06T16:00:00.000Z",
+                            "startDate": "2021-12-01T15:40:00.000Z",
+                            "endDate": "2022-01-05T19:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 75
                             }
                         },
                         {
-                            "startDate": "2021-12-01T15:40:00.000Z",
-                            "endDate": "2022-01-05T19:00:00.000Z",
+                            "startDate": "2021-12-16T16:00:00.000Z",
+                            "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 75
@@ -34453,19 +34225,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-04-07T09:47:00.000Z",
-                            "endDate": "2099-12-31T15:00:00.000Z",
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 70
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 60
+                            }
+                        },
+                        {
+                            "startDate": "2021-04-07T09:47:00.000Z",
+                            "endDate": "2099-12-31T15:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 70
                             }
                         }
                     ]
@@ -39517,19 +39289,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-12-09T16:14:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 40
+                            }
+                        },
+                        {
+                            "startDate": "2021-12-09T16:14:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
                             }
                         }
                     ]
@@ -39677,19 +39449,19 @@
                 {
                     "promotionalOffers": [
                         {
-                            "startDate": "2021-12-09T16:14:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        },
-                        {
                             "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 40
+                            }
+                        },
+                        {
+                            "startDate": "2021-12-09T16:14:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
                             }
                         }
                     ]
@@ -40534,18 +40306,18 @@
                     "promotionalOffers": [
                         {
                             "startDate": "2021-12-16T16:00:00.000Z",
-                            "endDate": null,
-                            "discountSetting": {
-                                "discountType": "PERCENTAGE",
-                                "discountPercentage": 0
-                            }
-                        },
-                        {
-                            "startDate": "2021-12-16T16:00:00.000Z",
                             "endDate": "2022-01-06T16:00:00.000Z",
                             "discountSetting": {
                                 "discountType": "PERCENTAGE",
                                 "discountPercentage": 30
+                            }
+                        },
+                        {
+                            "startDate": "2021-12-16T16:00:00.000Z",
+                            "endDate": null,
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
                             }
                         }
                     ]
@@ -42025,8 +41797,7 @@
     {
         "title": "Vampyr",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -42039,7 +41810,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -44252,10 +44024,7 @@
     },
     {
         "title": "Merry Mint Axe",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Afterparty",
@@ -45219,10 +44988,7 @@
     },
     {
         "title": "DC Set",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Yaga Bad Luck Bundle Pre-Purchase",
@@ -45866,7 +45632,23 @@
     },
     {
         "title": "Control",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-26T16:00:00.000Z",
+                            "endDate": "2021-12-27T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Auto Chess",
@@ -45874,10 +45656,7 @@
     },
     {
         "title": "Major Lazer",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fez",
@@ -45958,8 +45737,7 @@
     {
         "title": "Mutant Year Zero Seed of Evil",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -45972,14 +45750,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
         "title": "Mutant Year Zero: Road to Eden",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -45992,7 +45770,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -46421,10 +46200,7 @@
     },
     {
         "title": "World Cup 2019 Spray",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Ancestors: The Humankind Odyssey - Press",
@@ -46504,10 +46280,7 @@
     },
     {
         "title": "World Cup '19 Supply Drop",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Tetris® Effect Press",
@@ -46795,10 +46568,7 @@
     },
     {
         "title": "World Cup 2019 Attendee",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Falcon Age Pre-Purchase",
@@ -46962,10 +46732,7 @@
     },
     {
         "title": "Wonder",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Enter The Gungeon",
@@ -47061,10 +46828,7 @@
     },
     {
         "title": "Tender Defender",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Anno 1800",
@@ -47748,10 +47512,7 @@
     },
     {
         "title": "Marvel B",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "The Tomorrow Corporation Collection",
@@ -48071,7 +47832,23 @@
     },
     {
         "title": "Control",
-        "promotions": null
+        "promotions": {
+            "promotionalOffers": [
+                {
+                    "promotionalOffers": [
+                        {
+                            "startDate": "2021-12-26T16:00:00.000Z",
+                            "endDate": "2021-12-27T16:00:00.000Z",
+                            "discountSetting": {
+                                "discountType": "PERCENTAGE",
+                                "discountPercentage": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "upcomingPromotionalOffers": []
+        }
     },
     {
         "title": "Outward",
@@ -48648,8 +48425,7 @@
     {
         "title": "Vampyr",
         "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": [
+            "promotionalOffers": [
                 {
                     "promotionalOffers": [
                         {
@@ -48662,7 +48438,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "upcomingPromotionalOffers": []
         }
     },
     {
@@ -48703,10 +48480,7 @@
     },
     {
         "title": "Honor Guard",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Spellbreak Alpha Mage",
@@ -49202,10 +48976,7 @@
     },
     {
         "title": "Special football bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "My Time at Portia",
@@ -49417,10 +49188,7 @@
     },
     {
         "title": "Boogie spray",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Hello Neighbor: Hide and Seek",
@@ -49516,10 +49284,7 @@
     },
     {
         "title": "Llamalaxy",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Hello Neighbor Hide & Seek",
@@ -49543,17 +49308,11 @@
     },
     {
         "title": "20000 V-Bucks (Comp)",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Counterattack Bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "MinNightly",
@@ -49561,10 +49320,7 @@
     },
     {
         "title": "Deep Freeze Bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "ARK Editor",
@@ -49580,10 +49336,7 @@
     },
     {
         "title": "Fourth Down set - players",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Battalion Dev Kit",
@@ -49627,10 +49380,7 @@
     },
     {
         "title": "5,000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Satisfactory Nightly",
@@ -49642,31 +49392,19 @@
     },
     {
         "title": "[Promotion] Samsung - 10000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "[Promotion] Samsung - 15000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "[Promotion] Samsung - 5000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Unreal Tournament",
@@ -49678,24 +49416,15 @@
     },
     {
         "title": "400 V-Bucks (Comp)",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "200 V-Bucks (Comp)",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Samsung Preorder 10000 V-Bucks Promo",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "SHOWMAKER Mod Kit",
@@ -49703,24 +49432,15 @@
     },
     {
         "title": "PAX 2018",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Gamescom 2018",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite Android Audience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Skill XP Bundle",
@@ -49728,17 +49448,11 @@
     },
     {
         "title": "Battle Pass Season 5",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Season 5 - Battle Pass & Tiers",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Battalion 1944 Development Toolkit",
@@ -49750,10 +49464,7 @@
     },
     {
         "title": "Fortnite Pro-Am 2018 celebratory gift",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Bus Simulator 18 Editor",
@@ -49761,24 +49472,15 @@
     },
     {
         "title": "Deluxe Battle Pass - Season 4",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Season 4 - 25 Tiers",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Promotional Battle Pass - Season 4",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Dark and Light Editor",
@@ -49786,24 +49488,15 @@
     },
     {
         "title": "Fortnite Mobile Main Invite",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite Mobile",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Promotional Battle Pass - Season 3",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Mars 2030 Editor",
@@ -49811,66 +49504,39 @@
     },
     {
         "title": "Twitch Prime Promotion Item",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "PC - 2500 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "PC - 1000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "PC - 500 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "PC - 300 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "PC - 100 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Complimentary Season 2 Battle Pass",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite Battle Royale - Ranger skin",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Free HK audience access item",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "test offer for upgrading common 2+",
@@ -49882,10 +49548,7 @@
     },
     {
         "title": "Battle Royale",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Hello Neighbor Mod Kit",
@@ -49893,10 +49556,7 @@
     },
     {
         "title": "Fortnite",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Hammer Party",
@@ -49924,38 +49584,23 @@
     },
     {
         "title": "Fortnite - Storm Master Weapon Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite - Vigilante gun",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Xbox Fortnite Retail Audience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Xbox Pre-Purchase Audience Access",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Xbox Founder Audience Access",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Starter Pack",
@@ -49971,17 +49616,11 @@
     },
     {
         "title": "Fortnite Retail Audience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Fortnite Retail Deluxe Bundle",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Starter Pack",
@@ -49997,24 +49636,15 @@
     },
     {
         "title": "Pre-Order Pack",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Founder Access Audience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Pre Purchase Audience",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Chest of Gems",
@@ -50034,10 +49664,7 @@
     },
     {
         "title": "Fortnite Friend Code",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Warp Speed",
@@ -50205,10 +49832,7 @@
     },
     {
         "title": "2,800 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Test Item Anita",
@@ -50240,17 +49864,11 @@
     },
     {
         "title": "1,000 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "13,500 V-Bucks",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "SmokeTest",
@@ -50306,10 +49924,7 @@
     },
     {
         "title": "Fortnite",
-        "promotions": {
-            "promotionalOffers": [],
-            "upcomingPromotionalOffers": []
-        }
+        "promotions": null
     },
     {
         "title": "Test offer from engine category",

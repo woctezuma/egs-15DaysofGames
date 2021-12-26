@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 import src.aggregate_utils
+import src.auth_utils
 import src.download_utils
 import src.filter_utils
 import src.io_utils
@@ -328,3 +329,27 @@ class TestSearchUtilsMethods(TestCase):
         self.assertGreater(len(matches), 0)
         for element in matches:
             self.assertIn(target_game_name, element["title"])
+
+
+class TestAuthUtilsMethods(TestCase):
+    def test_get_root_url_for_auth_code(self):
+        self.assertEqual(
+            src.auth_utils.get_root_url_for_auth_code(),
+            "https://www.epicgames.com/id/api/redirect",
+        )
+
+    def test_get_auth_client(self):
+        client = src.auth_utils.get_auth_client()
+        self.assertIn("name", client.keys())
+        self.assertIn("id", client.keys())
+        self.assertIn("secret", client.keys())
+        self.assertIsNotNone(client["name"])
+        self.assertIsNotNone(client["id"])
+
+    def test_get_full_url_for_auth_code(self):
+        self.assertIn(
+            src.auth_utils.get_root_url_for_auth_code(),
+            src.auth_utils.get_full_url_for_auth_code(),
+        )
+        self.assertIn("?clientId=", src.auth_utils.get_full_url_for_auth_code())
+        self.assertIn("&responseType=code", src.auth_utils.get_full_url_for_auth_code())

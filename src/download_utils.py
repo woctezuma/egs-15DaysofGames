@@ -48,11 +48,13 @@ def download_store_data(
     if verbose:
         print(f"Cursor = {cursor} ; step = {step}")
 
+    json_data = {
+        "query": get_egs_query(cursor=cursor, step=step, include_dlc=include_dlc),
+    }
+
     r = requests.post(
         url=get_egs_url(),
-        json={
-            "query": get_egs_query(cursor=cursor, step=step, include_dlc=include_dlc)
-        },
+        json=json_data,
     )
 
     if verbose:

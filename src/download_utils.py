@@ -43,7 +43,11 @@ def get_egs_query(cursor: int = 0, step: int = None, include_dlc: bool = False) 
 
 
 def download_store_data(
-        cursor: int = 0, step: int = None, include_dlc: bool = False, verbose: bool = True
+    cursor: int = 0,
+    step: int = None,
+    include_dlc: bool = False,
+    auth_code: str = None,
+    verbose: bool = True,
 ) -> dict:
     if verbose:
         print(f"Cursor = {cursor} ; step = {step}")
@@ -51,6 +55,9 @@ def download_store_data(
     json_data = {
         "query": get_egs_query(cursor=cursor, step=step, include_dlc=include_dlc),
     }
+
+    if auth_code is not None:
+        json_data["code"] = auth_code
 
     r = requests.post(
         url=get_egs_url(),

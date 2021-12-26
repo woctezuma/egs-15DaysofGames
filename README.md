@@ -40,6 +40,7 @@ API documentation:
 -   [`SD4RK/epicstore_api`][egs-api-python]: a Python wrapper for the EGS API,
 -   [`Tectors/EpicGraphql`][egs-api-graphql]: a documentation of GraphQL queries for the EGS API,
 -   [`MixV2/EpicResearch`][egs-api-clients]: a documentation of Auth Clients' name, id and secret,
+-   [`acidicoala/ScreamDB`][egs-web-app]: a web app to view EGS item ids,
 
 Data leaks:
 
@@ -69,6 +70,7 @@ GraphQL advice:
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
 [egs-api-graphql]: <https://github.com/Tectors/EpicGraphql>
 [egs-api-clients]: <https://github.com/MixV2/EpicResearch>
+[egs-web-app]: <https://github.com/acidicoala/ScreamDB>
 
 [egs-datamining]: <https://github.com/woctezuma/egs-datamining>
 [geforce-leak]: <https://github.com/woctezuma/geforce-leak>

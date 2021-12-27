@@ -74,7 +74,11 @@ def download_store_data(
         except TypeError:
             # Retry in case data is None
             store_data = download_store_data(
-                cursor=cursor, step=step, include_dlc=include_dlc, verbose=verbose
+                cursor=cursor,
+                step=step,
+                include_dlc=include_dlc,
+                auth_code=auth_code,
+                verbose=verbose,
             )
     else:
         store_data = {}

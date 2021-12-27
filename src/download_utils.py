@@ -47,6 +47,7 @@ def download_store_data(
     step: int = None,
     include_dlc: bool = False,
     auth_code: str = None,
+    num_retries_left: int = 3,
     verbose: bool = True,
 ) -> dict:
     if verbose:
@@ -72,14 +73,19 @@ def download_store_data(
         try:
             store_data = data["data"]["Catalog"]["searchStore"]
         except TypeError:
-            # Retry in case data is None
-            store_data = download_store_data(
-                cursor=cursor,
-                step=step,
-                include_dlc=include_dlc,
-                auth_code=auth_code,
-                verbose=verbose,
-            )
+            if num_retries_left == 0:
+                store_data = {}
+            else:
+                print(f"Retrying the download. {num_retries_left} tentatives left.")
+                # Retry in case data is None
+                store_data = download_store_data(
+                    cursor=cursor,
+                    step=step,
+                    include_dlc=include_dlc,
+                    auth_code=auth_code,
+                    num_retries_left=num_retries_left - 1,
+                    verbose=verbose,
+                )
     else:
         store_data = {}
 

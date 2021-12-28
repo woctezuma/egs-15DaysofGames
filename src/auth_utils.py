@@ -14,11 +14,12 @@ def get_auth_client() -> dict[str, str | None]:
     return auth_client
 
 
-def get_full_url_for_auth_code(verbose: bool = True) -> str:
+def get_full_url_for_auth_code(client_id: str = None, verbose: bool = True) -> str:
     url = get_root_url_for_auth_code()
 
-    client = get_auth_client()
-    client_id = client["id"]
+    if client_id is None:
+        client = get_auth_client()
+        client_id = client["id"]
 
     full_url = f"{url}?clientId={client_id}&responseType=code"
 

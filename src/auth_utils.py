@@ -1,4 +1,4 @@
-def get_root_url_for_auth_code() -> str:
+def get_egs_auth_url() -> str:
     url = "https://www.epicgames.com/id/api/redirect"
     return url
 
@@ -14,8 +14,8 @@ def get_auth_client() -> dict[str, str | None]:
     return auth_client
 
 
-def get_full_url_for_auth_code(client_id: str = None, verbose: bool = True) -> str:
-    url = get_root_url_for_auth_code()
+def get_url_to_visit_for_auth_code(client_id: str = None, verbose: bool = True) -> str:
+    url = get_egs_auth_url()
 
     if client_id is None:
         client = get_auth_client()
@@ -30,4 +30,4 @@ def get_full_url_for_auth_code(client_id: str = None, verbose: bool = True) -> s
 
 
 if __name__ == "__main__":
-    _ = get_full_url_for_auth_code(verbose=True)
+    _ = get_url_to_visit_for_auth_code(verbose=True)

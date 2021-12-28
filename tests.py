@@ -332,9 +332,9 @@ class TestSearchUtilsMethods(TestCase):
 
 
 class TestAuthUtilsMethods(TestCase):
-    def test_get_root_url_for_auth_code(self):
+    def test_get_egs_auth_url(self):
         self.assertEqual(
-            src.auth_utils.get_root_url_for_auth_code(),
+            src.auth_utils.get_egs_auth_url(),
             "https://www.epicgames.com/id/api/redirect",
         )
 
@@ -346,10 +346,12 @@ class TestAuthUtilsMethods(TestCase):
         self.assertIsNotNone(client["name"])
         self.assertIsNotNone(client["id"])
 
-    def test_get_full_url_for_auth_code(self):
+    def test_get_url_to_visit_for_auth_code(self):
         self.assertIn(
-            src.auth_utils.get_root_url_for_auth_code(),
-            src.auth_utils.get_full_url_for_auth_code(),
+            src.auth_utils.get_egs_auth_url(),
+            src.auth_utils.get_url_to_visit_for_auth_code(),
         )
-        self.assertIn("?clientId=", src.auth_utils.get_full_url_for_auth_code())
-        self.assertIn("&responseType=code", src.auth_utils.get_full_url_for_auth_code())
+        self.assertIn("?clientId=", src.auth_utils.get_url_to_visit_for_auth_code())
+        self.assertIn(
+            "&responseType=code", src.auth_utils.get_url_to_visit_for_auth_code()
+        )

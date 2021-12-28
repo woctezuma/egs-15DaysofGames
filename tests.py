@@ -152,6 +152,15 @@ class TestIOUtilsMethods(TestCase):
 
         self.assertListEqual(promos, dummy_promos)
 
+    def test_get_auth_client_filename(self):
+        self.assertEqual(
+            src.io_utils.get_auth_client_filename(), "data/auth_clients.json"
+        )
+
+    def test_load_auth_clients(self):
+        auth_clients = src.io_utils.load_auth_clients()
+        self.assertGreater(len(auth_clients), 0)
+
 
 class TestSortUtilsMethods(TestCase):
     def test_sanitize_promos(self):

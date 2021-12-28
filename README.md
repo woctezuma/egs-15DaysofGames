@@ -17,12 +17,6 @@ pip install -r requirements.txt
 
 ## Usage
 
-(Optional) To receive a temporary authorization code:
-
-```bash
-python check_auth.py
-```
-
 To download data of upcoming promotions:
 
 ```bash
@@ -33,6 +27,14 @@ To filter promotions to focus on potential free games:
 
 ```bash
 python filter_promotions.py
+```
+
+### Work-In-Progress
+
+(Optional) To receive a temporary authorization code:
+
+```bash
+python check_auth.py
 ```
 
 ## Results

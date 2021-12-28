@@ -8,6 +8,7 @@ import src.io_utils
 import src.print_utils
 import src.search_utils
 import src.sort_utils
+import src.token_utils
 
 
 class TestAggregateUtilsMethods(TestCase):
@@ -364,3 +365,98 @@ class TestAuthUtilsMethods(TestCase):
         self.assertIn(
             "&responseType=code", src.auth_utils.get_url_to_visit_for_auth_code()
         )
+
+
+class TestTokenUtilsMethods(TestCase):
+    def test_get_egs_oauth_url(self):
+        url = src.token_utils.get_egs_oauth_url()
+        self.assertEqual(
+            url,
+            "https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token",
+        )
+
+    def test_encode_in_base64(self):
+        # Reference: https://www.base64encode.org/
+        self.assertEqual(
+            src.token_utils.encode_in_base64("hello world"), "aGVsbG8gd29ybGQ="
+        )
+        self.assertEqual(
+            src.token_utils.encode_in_base64("hello:world"), "aGVsbG86d29ybGQ="
+        )
+
+    def test_convert_to_base64_secret(self):
+        client_id = "hello"
+        client_secret = "world"
+        expected_base64_secret = src.token_utils.encode_in_base64(
+            f"{client_id}:{client_secret}"
+        )
+        self.assertEqual(
+            src.token_utils.convert_to_base64_secret(
+                client_id=client_id, client_secret=client_secret
+            ),
+            expected_base64_secret,
+        )
+        # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/authorization_code.md
+        self.assertEqual(
+            src.token_utils.convert_to_base64_secret(
+                client_id="ec684b8c687f479fadea3cb2ad83f5c6",
+                client_secret="e1f31c211f28413186262d37a13fc84d",
+            ),
+            "ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ=",
+        )
+
+    def test_get_secret_headers(self):
+        client_id = "hello"
+        client_secret = "world"
+        headers = src.token_utils.get_secret_headers(
+            client_id=client_id, client_secret=client_secret
+        )
+        base64_secret = src.token_utils.convert_to_base64_secret(
+            client_id=client_id, client_secret=client_secret
+        )
+        self.assertIn("Content-Type", headers.keys())
+        self.assertEqual(headers["Content-Type"], "application/x-www-form-urlencoded")
+        self.assertIn("Authorization", headers.keys())
+        self.assertEqual(headers["Authorization"], f"basic {base64_secret}")
+
+    def test_get_access_token(self):
+        access_token = src.token_utils.get_access_token(
+            client_id="hello",
+            client_secret="world",
+            body_data={"grant_type": "dummy"},
+            verbose=True,
+        )
+        self.assertIsNone(access_token)
+
+    def test_get_access_token_with_client_credentials(self):
+        access_token = src.token_utils.get_access_token_with_client_credentials(
+            client_id="hello", client_secret="world", verbose=True
+        )
+        self.assertIsNone(access_token)
+        # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/authorization_code.md
+        access_token = src.token_utils.get_access_token_with_client_credentials(
+            client_id="ec684b8c687f479fadea3cb2ad83f5c6",
+            client_secret="e1f31c211f28413186262d37a13fc84d",
+            verbose=True,
+        )
+        self.assertIsNotNone(access_token)
+        self.assertGreater(len(access_token), 0)
+        self.assertEqual(len(access_token), 32)
+
+    def test_get_access_token_with_authorization_code(self):
+        access_token = src.token_utils.get_access_token_with_authorization_code(
+            client_id="hello",
+            client_secret="world",
+            authorization_code="dummy",
+            verbose=True,
+        )
+        self.assertIsNone(access_token)
+
+    def test_get_oauth_headers(self):
+        headers = src.token_utils.get_oauth_headers(access_token="dummy_token")
+        self.assertIn("Accept", headers.keys())
+        self.assertEqual(headers["Accept"], "application/json")
+        self.assertIn("Content-Type", headers.keys())
+        self.assertEqual(headers["Content-Type"], "application/json")
+        self.assertIn("Authorization", headers.keys())
+        self.assertEqual(headers["Authorization"], "Bearer dummy_token")

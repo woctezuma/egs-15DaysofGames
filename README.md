@@ -79,7 +79,7 @@ GraphQL advice:
 [wiki-retrospective-look]: <https://github.com/woctezuma/egs-15DaysofGames/wiki>
 
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
-[egs-api-graphql]: <https://github.com/Tectors/EpicGraphql>
+[egs-api-graphql]: <https://github.com/ToutinRoger/FortniteFovChanger>
 [egs-api-clients]: <https://github.com/MixV2/EpicResearch>
 [egs-web-app]: <https://github.com/acidicoala/ScreamDB>
 

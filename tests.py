@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 import src.aggregate_utils
-import src.auth_utils
+import src.auth_code_utils
 import src.download_utils
 import src.filter_utils
 import src.io_utils
@@ -361,15 +361,15 @@ class TestSearchUtilsMethods(TestCase):
             self.assertIn(target_game_name, element["title"])
 
 
-class TestAuthUtilsMethods(TestCase):
+class TestAuthCodeUtilsMethods(TestCase):
     def test_get_egs_auth_url(self):
         self.assertEqual(
-            src.auth_utils.get_egs_auth_url(),
+            src.auth_code_utils.get_egs_auth_url(),
             "https://www.epicgames.com/id/api/redirect",
         )
 
     def test_get_auth_client(self):
-        client = src.auth_utils.get_auth_client()
+        client = src.auth_code_utils.get_auth_client()
         self.assertIn("name", client.keys())
         self.assertIn("id", client.keys())
         self.assertIn("secret", client.keys())
@@ -378,12 +378,14 @@ class TestAuthUtilsMethods(TestCase):
 
     def test_get_url_to_visit_for_auth_code(self):
         self.assertIn(
-            src.auth_utils.get_egs_auth_url(),
-            src.auth_utils.get_url_to_visit_for_auth_code(),
+            src.auth_code_utils.get_egs_auth_url(),
+            src.auth_code_utils.get_url_to_visit_for_auth_code(),
         )
-        self.assertIn("?clientId=", src.auth_utils.get_url_to_visit_for_auth_code())
         self.assertIn(
-            "&responseType=code", src.auth_utils.get_url_to_visit_for_auth_code()
+            "?clientId=", src.auth_code_utils.get_url_to_visit_for_auth_code()
+        )
+        self.assertIn(
+            "&responseType=code", src.auth_code_utils.get_url_to_visit_for_auth_code()
         )
 
 

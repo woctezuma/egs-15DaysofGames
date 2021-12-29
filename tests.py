@@ -368,6 +368,13 @@ class TestAuthUtilsMethods(TestCase):
 
 
 class TestTokenUtilsMethods(TestCase):
+    def test_get_egs_hosts(self):
+        egs_hosts = src.token_utils.get_egs_hosts()
+        self.assertGreater(len(egs_hosts), 0)
+        self.assertEqual(
+            egs_hosts["_oauth_host"], "account-public-service-prod.ol.epicgames.com"
+        )
+
     def test_get_egs_oauth_url(self):
         url = src.token_utils.get_egs_oauth_url()
         self.assertEqual(

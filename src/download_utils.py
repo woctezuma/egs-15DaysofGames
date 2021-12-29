@@ -58,6 +58,9 @@ def download_store_data(
     }
 
     if auth_code is not None:
+        print(
+            "[Warning] Authorization Code is directly used, without any Access Token. If possible, find a better way."
+        )
         json_data["code"] = auth_code
 
     r = requests.post(

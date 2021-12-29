@@ -464,26 +464,34 @@ class TestTokenUtilsMethods(TestCase):
         self.assertIsNone(access_token)
         # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/auth_clients.md
         for rely_on_oauth_basic in [False, True]:
-            access_token = src.token_utils.get_access_token_with_client_credentials(
-                client_id="ec684b8c687f479fadea3cb2ad83f5c6",
-                client_secret="e1f31c211f28413186262d37a13fc84d",
-                rely_on_oauth_basic=rely_on_oauth_basic,
-                verbose=True,
-            )
-            self.assertIsNotNone(access_token)
-            self.assertGreater(len(access_token), 0)
-            self.assertEqual(len(access_token), 32)
+            for ask_for_long_token in [False, True]:
+                access_token = src.token_utils.get_access_token_with_client_credentials(
+                    client_id="ec684b8c687f479fadea3cb2ad83f5c6",
+                    client_secret="e1f31c211f28413186262d37a13fc84d",
+                    rely_on_oauth_basic=rely_on_oauth_basic,
+                    ask_for_long_token=ask_for_long_token,
+                    verbose=True,
+                )
+                self.assertIsNotNone(access_token)
+                self.assertGreater(len(access_token), 0)
+                if ask_for_long_token:
+                    expected_access_token_length = 884
+                else:
+                    expected_access_token_length = 32
+                self.assertEqual(len(access_token), expected_access_token_length)
 
     def test_get_access_token_with_authorization_code(self):
         for rely_on_oauth_basic in [False, True]:
-            access_token = src.token_utils.get_access_token_with_authorization_code(
-                client_id="hello",
-                client_secret="world",
-                authorization_code="dummy",
-                rely_on_oauth_basic=rely_on_oauth_basic,
-                verbose=True,
-            )
-            self.assertIsNone(access_token)
+            for ask_for_long_token in [False, True]:
+                access_token = src.token_utils.get_access_token_with_authorization_code(
+                    client_id="hello",
+                    client_secret="world",
+                    authorization_code="dummy",
+                    rely_on_oauth_basic=rely_on_oauth_basic,
+                    ask_for_long_token=ask_for_long_token,
+                    verbose=True,
+                )
+                self.assertIsNone(access_token)
 
     def test_get_oauth_headers(self):
         headers = src.token_utils.get_oauth_headers(access_token="dummy_token")

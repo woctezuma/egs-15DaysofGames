@@ -3,6 +3,7 @@ from unittest import TestCase
 import src.aggregate_utils
 import src.auth_code_utils
 import src.auth_token_utils
+import src.auth_utils
 import src.download_utils
 import src.filter_utils
 import src.io_utils
@@ -512,3 +513,102 @@ class TestAuthTokenUtilsMethods(TestCase):
         self.assertEqual(headers["Content-Type"], "application/json")
         self.assertIn("Authorization", headers.keys())
         self.assertEqual(headers["Authorization"], "Bearer dummy_token")
+
+
+class TestAuthUtils(TestCase):
+    def test_get_token(self):
+        rely_on_oauth_basic = True
+        ask_for_long_token = True
+        verbose = True
+
+        target_client_name = "graphqlWebsite"
+        client = src.io_utils.load_target_auth_client(
+            target_client_name, verbose=verbose
+        )
+
+        for authorization_code in ["", "dummy"]:
+            access_token = src.auth_utils.get_token(
+                client=client,
+                authorization_code=authorization_code,
+                rely_on_oauth_basic=rely_on_oauth_basic,
+                ask_for_long_token=ask_for_long_token,
+                verbose=verbose,
+            )
+            self.assertIsNone(access_token)
+
+        target_client_name = "launcherAppClient2"
+        client = src.io_utils.load_target_auth_client(
+            target_client_name, verbose=verbose
+        )
+
+        authorization_code = ""
+        access_token = src.auth_utils.get_token(
+            client=client,
+            authorization_code=authorization_code,
+            rely_on_oauth_basic=rely_on_oauth_basic,
+            ask_for_long_token=ask_for_long_token,
+            verbose=verbose,
+        )
+        self.assertGreater(len(access_token), 0)
+
+        authorization_code = "dummy"
+        access_token = src.auth_utils.get_token(
+            client=client,
+            authorization_code=authorization_code,
+            rely_on_oauth_basic=rely_on_oauth_basic,
+            ask_for_long_token=ask_for_long_token,
+            verbose=verbose,
+        )
+        self.assertEqual(len(access_token), 0)
+
+    def test_get_headers(self):
+        headers = src.auth_utils.get_headers(access_token=None)
+        self.assertNotIn("Authorization", headers.keys())
+
+        headers = src.auth_utils.get_headers(access_token="")
+        self.assertNotIn("Authorization", headers.keys())
+
+        dummy_access_token = "dummy"
+        expected_headers = src.auth_token_utils.get_oauth_headers(dummy_access_token)
+
+        headers = src.auth_utils.get_headers(dummy_access_token)
+        self.assertIn("Authorization", headers.keys())
+        self.assertDictEqual(headers, expected_headers)
+
+    def test_get_simple_json_query(self):
+        json_query = src.auth_utils.get_simple_json_query()
+        self.assertIn("query", json_query.keys())
+        self.assertIn("Catalog", json_query["query"])
+        self.assertIn("searchStore(count:3, start: 0)", json_query["query"])
+        self.assertIn("{ paging {total} elements {title} }", json_query["query"])
+
+    def test_query_graphql_while_auth(self):
+        ask_for_long_token = True
+        rely_on_oauth_basic = True
+        verbose = True
+
+        target_client_name = "graphqlWebsite"
+        authorization_code = ""
+
+        data = src.auth_utils.query_graphql_while_auth(
+            target_client_name=target_client_name,
+            ask_for_long_token=ask_for_long_token,
+            rely_on_oauth_basic=rely_on_oauth_basic,
+            authorization_code=authorization_code,
+            verbose=verbose,
+        )
+
+        self.assertEqual(len(data), 0)
+
+        target_client_name = "launcherAppClient2"
+        authorization_code = ""
+
+        data = src.auth_utils.query_graphql_while_auth(
+            target_client_name=target_client_name,
+            ask_for_long_token=ask_for_long_token,
+            rely_on_oauth_basic=rely_on_oauth_basic,
+            authorization_code=authorization_code,
+            verbose=verbose,
+        )
+
+        self.assertGreater(len(data), 0)

@@ -2,13 +2,13 @@ from unittest import TestCase
 
 import src.aggregate_utils
 import src.auth_code_utils
+import src.auth_token_utils
 import src.download_utils
 import src.filter_utils
 import src.io_utils
 import src.print_utils
 import src.search_utils
 import src.sort_utils
-import src.token_utils
 
 
 class TestAggregateUtilsMethods(TestCase):
@@ -389,16 +389,16 @@ class TestAuthCodeUtilsMethods(TestCase):
         )
 
 
-class TestTokenUtilsMethods(TestCase):
+class TestAuthTokenUtilsMethods(TestCase):
     def test_get_egs_hosts(self):
-        egs_hosts = src.token_utils.get_egs_hosts()
+        egs_hosts = src.auth_token_utils.get_egs_hosts()
         self.assertGreater(len(egs_hosts), 0)
         self.assertEqual(
             egs_hosts["_oauth_host"], "account-public-service-prod.ol.epicgames.com"
         )
 
     def test_get_egs_oauth_url(self):
-        url = src.token_utils.get_egs_oauth_url()
+        url = src.auth_token_utils.get_egs_oauth_url()
         self.assertEqual(
             url,
             "https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token",
@@ -407,27 +407,27 @@ class TestTokenUtilsMethods(TestCase):
     def test_encode_in_base64(self):
         # Reference: https://www.base64encode.org/
         self.assertEqual(
-            src.token_utils.encode_in_base64("hello world"), "aGVsbG8gd29ybGQ="
+            src.auth_token_utils.encode_in_base64("hello world"), "aGVsbG8gd29ybGQ="
         )
         self.assertEqual(
-            src.token_utils.encode_in_base64("hello:world"), "aGVsbG86d29ybGQ="
+            src.auth_token_utils.encode_in_base64("hello:world"), "aGVsbG86d29ybGQ="
         )
 
     def test_convert_to_base64_secret(self):
         client_id = "hello"
         client_secret = "world"
-        expected_base64_secret = src.token_utils.encode_in_base64(
+        expected_base64_secret = src.auth_token_utils.encode_in_base64(
             f"{client_id}:{client_secret}"
         )
         self.assertEqual(
-            src.token_utils.convert_to_base64_secret(
+            src.auth_token_utils.convert_to_base64_secret(
                 client_id=client_id, client_secret=client_secret
             ),
             expected_base64_secret,
         )
         # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/authorization_code.md
         self.assertEqual(
-            src.token_utils.convert_to_base64_secret(
+            src.auth_token_utils.convert_to_base64_secret(
                 client_id="ec684b8c687f479fadea3cb2ad83f5c6",
                 client_secret="e1f31c211f28413186262d37a13fc84d",
             ),
@@ -437,10 +437,10 @@ class TestTokenUtilsMethods(TestCase):
     def test_get_secret_headers(self):
         client_id = "hello"
         client_secret = "world"
-        headers = src.token_utils.get_secret_headers(
+        headers = src.auth_token_utils.get_secret_headers(
             client_id=client_id, client_secret=client_secret
         )
-        base64_secret = src.token_utils.convert_to_base64_secret(
+        base64_secret = src.auth_token_utils.convert_to_base64_secret(
             client_id=client_id, client_secret=client_secret
         )
         self.assertIn("Content-Type", headers.keys())
@@ -450,7 +450,7 @@ class TestTokenUtilsMethods(TestCase):
 
     def test_get_access_token(self):
         for rely_on_oauth_basic in [False, True]:
-            access_token = src.token_utils.get_access_token(
+            access_token = src.auth_token_utils.get_access_token(
                 client_id="hello",
                 client_secret="world",
                 body_data={"grant_type": "dummy"},
@@ -460,19 +460,21 @@ class TestTokenUtilsMethods(TestCase):
             self.assertIsNone(access_token)
 
     def test_get_access_token_with_client_credentials(self):
-        access_token = src.token_utils.get_access_token_with_client_credentials(
+        access_token = src.auth_token_utils.get_access_token_with_client_credentials(
             client_id="hello", client_secret="world", verbose=True
         )
         self.assertIsNone(access_token)
         # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/auth_clients.md
         for rely_on_oauth_basic in [False, True]:
             for ask_for_long_token in [False, True]:
-                access_token = src.token_utils.get_access_token_with_client_credentials(
-                    client_id="ec684b8c687f479fadea3cb2ad83f5c6",
-                    client_secret="e1f31c211f28413186262d37a13fc84d",
-                    rely_on_oauth_basic=rely_on_oauth_basic,
-                    ask_for_long_token=ask_for_long_token,
-                    verbose=True,
+                access_token = (
+                    src.auth_token_utils.get_access_token_with_client_credentials(
+                        client_id="ec684b8c687f479fadea3cb2ad83f5c6",
+                        client_secret="e1f31c211f28413186262d37a13fc84d",
+                        rely_on_oauth_basic=rely_on_oauth_basic,
+                        ask_for_long_token=ask_for_long_token,
+                        verbose=True,
+                    )
                 )
                 self.assertIsNotNone(access_token)
                 self.assertGreater(len(access_token), 0)
@@ -485,18 +487,20 @@ class TestTokenUtilsMethods(TestCase):
     def test_get_access_token_with_authorization_code(self):
         for rely_on_oauth_basic in [False, True]:
             for ask_for_long_token in [False, True]:
-                access_token = src.token_utils.get_access_token_with_authorization_code(
-                    client_id="hello",
-                    client_secret="world",
-                    authorization_code="dummy",
-                    rely_on_oauth_basic=rely_on_oauth_basic,
-                    ask_for_long_token=ask_for_long_token,
-                    verbose=True,
+                access_token = (
+                    src.auth_token_utils.get_access_token_with_authorization_code(
+                        client_id="hello",
+                        client_secret="world",
+                        authorization_code="dummy",
+                        rely_on_oauth_basic=rely_on_oauth_basic,
+                        ask_for_long_token=ask_for_long_token,
+                        verbose=True,
+                    )
                 )
                 self.assertIsNone(access_token)
 
     def test_get_oauth_headers(self):
-        headers = src.token_utils.get_oauth_headers(access_token="dummy_token")
+        headers = src.auth_token_utils.get_oauth_headers(access_token="dummy_token")
         self.assertIn("User-Agent", headers.keys())
         self.assertEqual(
             headers["User-Agent"],

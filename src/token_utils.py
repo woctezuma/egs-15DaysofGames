@@ -95,6 +95,7 @@ def get_access_token_with_authorization_code(
 
 def get_oauth_headers(access_token: str) -> dict[str, str]:
     headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Authorization": f"Bearer {access_token}",

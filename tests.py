@@ -481,6 +481,11 @@ class TestTokenUtilsMethods(TestCase):
 
     def test_get_oauth_headers(self):
         headers = src.token_utils.get_oauth_headers(access_token="dummy_token")
+        self.assertIn("User-Agent", headers.keys())
+        self.assertEqual(
+            headers["User-Agent"],
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0",
+        )
         self.assertIn("Accept", headers.keys())
         self.assertEqual(headers["Accept"], "application/json")
         self.assertIn("Content-Type", headers.keys())

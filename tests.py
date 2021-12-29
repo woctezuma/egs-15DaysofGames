@@ -602,6 +602,20 @@ class TestAuthUtils(TestCase):
         self.assertLessEqual(len(data), 3)
         self.assertIn("data", data.keys())
         self.assertIn("extensions", data.keys())
+        self.assertEqual(len(data["extensions"]), 0)
+        if len(data) > 2:
+            self.assertIn("errors", data.keys())
+            self.assertGreater(len(data["errors"]), 0)
+        self.assertIn("Catalog", data["data"].keys())
+        self.assertIn("searchStore", data["data"]["Catalog"].keys())
+        # Access to the publicly visible database, with no special permission because the client secret is unknown:
+        result = data["data"]["Catalog"]["searchStore"]
+        self.assertGreater(len(result), 0)
+        self.assertIn("paging", result.keys())
+        self.assertIn("total", result["paging"].keys())
+        self.assertIn("elements", result.keys())
+        self.assertGreater(result["paging"]["total"], 0)
+        self.assertGreater(len(result["elements"]), 0)
 
         target_client_name = "launcherAppClient2"
         authorization_code = ""
@@ -618,3 +632,12 @@ class TestAuthUtils(TestCase):
         self.assertLessEqual(len(data), 3)
         self.assertIn("data", data.keys())
         self.assertIn("extensions", data.keys())
+        self.assertEqual(len(data["extensions"]), 0)
+        if len(data) > 2:
+            self.assertIn("errors", data.keys())
+            self.assertGreater(len(data["errors"]), 0)
+        self.assertIn("Catalog", data["data"].keys())
+        self.assertIn("searchStore", data["data"]["Catalog"].keys())
+        # Access token with insufficient permissions when using client credentials:
+        result = data["data"]["Catalog"]["searchStore"]
+        self.assertIsNone(result)

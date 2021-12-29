@@ -1,6 +1,7 @@
 import base64
 
 import requests
+from requests.auth import HTTPBasicAuth
 
 
 def get_egs_hosts() -> dict[str, str]:
@@ -52,13 +53,24 @@ def get_secret_headers(client_id: str, client_secret: str) -> dict:
 
 
 def get_access_token(
-    client_id: str, client_secret: str, body_data: dict, verbose: bool = True
+    client_id: str,
+    client_secret: str,
+    body_data: dict,
+    rely_on_oauth_basic: bool = False,
+    verbose: bool = True,
 ) -> str | None:
-    r = requests.post(
-        url=get_egs_oauth_url(),
-        data=body_data,
-        headers=get_secret_headers(client_id, client_secret),
-    )
+    if rely_on_oauth_basic:
+        r = requests.post(
+            url=get_egs_oauth_url(),
+            data=body_data,
+            auth=HTTPBasicAuth(client_id, client_secret),
+        )
+    else:
+        r = requests.post(
+            url=get_egs_oauth_url(),
+            data=body_data,
+            headers=get_secret_headers(client_id, client_secret),
+        )
 
     if r.ok:
         data = r.json()
@@ -76,20 +88,31 @@ def get_access_token(
 
 
 def get_access_token_with_client_credentials(
-    client_id: str, client_secret: str, verbose: bool = True
+    client_id: str,
+    client_secret: str,
+    rely_on_oauth_basic: bool = False,
+    verbose: bool = True,
 ) -> str | None:
     # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/client_credentials.md
     body_data = {"grant_type": "client_credentials"}
-    access_token = get_access_token(client_id, client_secret, body_data, verbose)
+    access_token = get_access_token(
+        client_id, client_secret, body_data, rely_on_oauth_basic, verbose
+    )
     return access_token
 
 
 def get_access_token_with_authorization_code(
-    client_id: str, client_secret: str, authorization_code: str, verbose: bool = True
+    client_id: str,
+    client_secret: str,
+    authorization_code: str,
+    rely_on_oauth_basic: bool = False,
+    verbose: bool = True,
 ) -> str | None:
     # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/authorization_code.md
     body_data = {"grant_type": "authorization_code", "code": f"{authorization_code}"}
-    access_token = get_access_token(client_id, client_secret, body_data, verbose)
+    access_token = get_access_token(
+        client_id, client_secret, body_data, rely_on_oauth_basic, verbose
+    )
     return access_token
 
 

@@ -462,7 +462,7 @@ class TestTokenUtilsMethods(TestCase):
             client_id="hello", client_secret="world", verbose=True
         )
         self.assertIsNone(access_token)
-        # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/grant_types/authorization_code.md
+        # Reference: https://github.com/MixV2/EpicResearch/blob/master/docs/auth/auth_clients.md
         for rely_on_oauth_basic in [False, True]:
             access_token = src.token_utils.get_access_token_with_client_credentials(
                 client_id="ec684b8c687f479fadea3cb2ad83f5c6",

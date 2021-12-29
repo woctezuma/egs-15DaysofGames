@@ -480,7 +480,7 @@ class TestAuthTokenUtilsMethods(TestCase):
                 self.assertIsNotNone(access_token)
                 self.assertGreater(len(access_token), 0)
                 if ask_for_long_token:
-                    expected_access_token_length = 884
+                    expected_access_token_length = 1075
                 else:
                     expected_access_token_length = 32
                 self.assertEqual(len(access_token), expected_access_token_length)
@@ -559,7 +559,7 @@ class TestAuthUtils(TestCase):
             ask_for_long_token=ask_for_long_token,
             verbose=verbose,
         )
-        self.assertEqual(len(access_token), 0)
+        self.assertIsNone(access_token)
 
     def test_get_headers(self):
         headers = src.auth_utils.get_headers(access_token=None)
@@ -598,7 +598,10 @@ class TestAuthUtils(TestCase):
             verbose=verbose,
         )
 
-        self.assertEqual(len(data), 0)
+        self.assertGreaterEqual(len(data), 2)
+        self.assertLessEqual(len(data), 3)
+        self.assertIn("data", data.keys())
+        self.assertIn("extensions", data.keys())
 
         target_client_name = "launcherAppClient2"
         authorization_code = ""
@@ -611,4 +614,7 @@ class TestAuthUtils(TestCase):
             verbose=verbose,
         )
 
-        self.assertGreater(len(data), 0)
+        self.assertGreaterEqual(len(data), 2)
+        self.assertLessEqual(len(data), 3)
+        self.assertIn("data", data.keys())
+        self.assertIn("extensions", data.keys())

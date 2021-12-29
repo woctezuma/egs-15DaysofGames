@@ -162,6 +162,26 @@ class TestIOUtilsMethods(TestCase):
         auth_clients = src.io_utils.load_auth_clients()
         self.assertGreater(len(auth_clients), 0)
 
+    def test_load_target_auth_client(self):
+        target_client = src.io_utils.load_target_auth_client(
+            target_client_name="dummy", verbose=True
+        )
+        self.assertEqual(len(target_client), 0)
+        target_client = src.io_utils.load_target_auth_client(
+            target_client_name="fortnitePCGameClient", verbose=True
+        )
+        self.assertEqual(len(target_client), 3)
+        self.assertEqual(target_client["name"], "fortnitePCGameClient")
+        self.assertEqual(target_client["id"], "ec684b8c687f479fadea3cb2ad83f5c6")
+        self.assertEqual(target_client["secret"], "e1f31c211f28413186262d37a13fc84d")
+        target_client = src.io_utils.load_target_auth_client(
+            target_client_name="graphqlWebsite", verbose=True
+        )
+        self.assertEqual(len(target_client), 3)
+        self.assertEqual(target_client["name"], "graphqlWebsite")
+        self.assertEqual(target_client["id"], "319e1527d0be4457a1067829fc0ad86e")
+        self.assertEqual(target_client["secret"], None)
+
 
 class TestSortUtilsMethods(TestCase):
     def test_sanitize_promos(self):

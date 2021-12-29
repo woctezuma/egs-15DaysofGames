@@ -40,6 +40,23 @@ def load_auth_clients() -> list[dict[str, str | None]]:
     return data
 
 
+def load_target_auth_client(
+    target_client_name: str = "launcherAppClient2", verbose: bool = True
+) -> dict[str, str | None]:
+    auth_clients = load_auth_clients()
+    relevant_clients = [c for c in auth_clients if c["name"] == target_client_name]
+
+    if len(relevant_clients) > 0:
+        first_client = relevant_clients[0]
+    else:
+        first_client = {}
+
+    if verbose:
+        print(first_client)
+
+    return first_client
+
+
 if __name__ == "__main__":
     fname = get_output_filename()
     print(fname)

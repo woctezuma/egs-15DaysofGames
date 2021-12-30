@@ -37,6 +37,20 @@ python filter_promotions.py
 python check_auth.py
 ```
 
+NB: cookie information is required to be able to receive a temporary authorization code from within Python.
+
+<details><summary>How to fill-in your cookie information</summary>
+1. Make sure you are connected to your [Epic Games][epic-games-store-login] account,
+2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools,
+3. Use the filtering option to find the cookie value for `EPIC_SESSION_AP`, 
+4. Copy-paste this cookie value into a new file called `data/personal_info.json`:
+   ```json
+   {
+       "EPIC_SESSION_AP": "PASTE_YOUR_COOKIE_VALUE_HERE"
+   }  
+   ```
+</details>
+
 ## Results
 
 Results are shown [on the Wiki][wiki-results].
@@ -76,6 +90,7 @@ GraphQL advice:
 [codacy-image]: <https://api.codacy.com/project/badge/Grade/3c06156df0dc4e26956e1dd9c17cb57b>
 
 [python-download-url]: <https://www.python.org/downloads/>
+[epic-games-store-login]: <https://www.epicgames.com/login>
 
 [wiki-results]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Upcoming-Promotions>
 [wiki-graphql]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/GraphQL>

@@ -1,6 +1,6 @@
 import requests
 
-from src.auth_code_utils import get_url_to_visit_for_auth_code
+from src.auth_code_utils import get_url_to_visit_for_auth_code, get_authorization_code
 from src.auth_token_utils import (
     get_access_token_with_authorization_code,
     get_access_token_with_client_credentials,
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     target_client_name = "launcherAppClient2"
     ask_for_long_token = True
     rely_on_oauth_basic = False
-    authorization_code = ""
+    authorization_code = get_authorization_code(cookie_fname=cookie_name, verbose=True)
     verbose = True
 
     data = query_graphql_while_auth(

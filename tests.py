@@ -400,6 +400,14 @@ class TestAuthCodeUtilsMethods(TestCase):
             "&responseType=code", src.auth_code_utils.get_url_to_visit_for_auth_code()
         )
 
+    def test_get_authorization_code(self):
+        authorization_code = src.auth_code_utils.get_authorization_code(
+            cookie_fname="dummy.json"
+        )
+        self.assertEqual(len(authorization_code), 0)
+        authorization_code = src.auth_code_utils.get_authorization_code()
+        self.assertGreaterEqual(len(authorization_code), 0)
+
 
 class TestAuthTokenUtilsMethods(TestCase):
     def test_get_egs_hosts(self):

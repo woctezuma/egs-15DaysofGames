@@ -43,6 +43,8 @@ Results are shown [on the Wiki][wiki-results].
 
 A retrospective analysis of the results is conducted [on the homepage of the Wiki][wiki-retrospective-look].
 
+An investigation of the leaks found online is conducted [on the Investigation page of the Wiki][wiki-investigation].
+
 ## References
 
 API documentation:
@@ -78,6 +80,7 @@ GraphQL advice:
 [wiki-results]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Upcoming-Promotions>
 [wiki-graphql]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/GraphQL>
 [wiki-retrospective-look]: <https://github.com/woctezuma/egs-15DaysofGames/wiki>
+[wiki-investigation]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Investigation>
 
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
 [egs-api-graphql]: <https://github.com/ToutinRoger/FortniteFovChanger>

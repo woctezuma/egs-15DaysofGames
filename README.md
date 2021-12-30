@@ -41,6 +41,7 @@ NB: cookie information is required to be able to receive a temporary authorizati
 
 <details><summary>How to fill-in your cookie information</summary>
 <p>
+
 1. Make sure you are connected to your [Epic Games][epic-games-store-login] account,<br/>
 2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools,<br/>
 3. Use the filtering option to find the cookie value for `EPIC_SESSION_AP`,<br/>

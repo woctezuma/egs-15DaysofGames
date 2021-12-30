@@ -183,6 +183,17 @@ class TestIOUtilsMethods(TestCase):
         self.assertEqual(target_client["id"], "319e1527d0be4457a1067829fc0ad86e")
         self.assertEqual(target_client["secret"], None)
 
+    def test_get_epic_cookie_file_name(self):
+        self.assertEqual(
+            src.io_utils.get_epic_cookie_file_name(), "data/personal_info.json"
+        )
+
+    def test_load_epic_cookie_from_disk(self):
+        cookie = src.io_utils.load_epic_cookie_from_disk(fname="dummy_cookie.json")
+        self.assertEqual(len(cookie), 0)
+        cookie = src.io_utils.load_epic_cookie_from_disk()
+        self.assertGreaterEqual(len(cookie), 0)
+
 
 class TestSortUtilsMethods(TestCase):
     def test_sanitize_promos(self):

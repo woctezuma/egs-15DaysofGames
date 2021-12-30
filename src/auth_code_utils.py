@@ -62,5 +62,7 @@ def get_authorization_code(
 
 
 if __name__ == "__main__":
-    cookie_name = "../" + get_epic_cookie_file_name()
+    parent_dir = "../"
+    cookie_name = parent_dir + get_epic_cookie_file_name()
+
     authorization_code = get_authorization_code(cookie_fname=cookie_name, verbose=True)

@@ -56,7 +56,7 @@ def get_authorization_code(
         code = ""
 
     if verbose:
-        print(f"Authorization code: {code}")
+        print(f"Authorization code: {code} (automatically retrieved)")
 
     return code
 

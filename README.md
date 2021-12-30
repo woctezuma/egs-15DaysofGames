@@ -31,7 +31,7 @@ python filter_promotions.py
 
 ### Work-In-Progress
 
-(Optional) To receive a temporary authorization code:
+(Optional) To receive an Access Token for different Auth Clients, with or without an authorization code:
 
 ```bash
 python check_auth.py

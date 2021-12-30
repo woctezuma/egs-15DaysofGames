@@ -31,8 +31,9 @@ def get_auth_client_filename() -> str:
     return fname
 
 
-def load_auth_clients() -> list[dict[str, str | None]]:
-    fname = get_auth_client_filename()
+def load_auth_clients(fname: str = None) -> list[dict[str, str | None]]:
+    if fname is None:
+        fname = get_auth_client_filename()
 
     with open(fname, "r", encoding="utf-8") as f:
         data = json.load(f)

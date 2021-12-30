@@ -70,9 +70,12 @@ def query_graphql_while_auth(
     rely_on_oauth_basic: bool = False,
     ask_for_long_token: bool = True,
     authorization_code: str = "",
+    auth_clients_fname: str = None,
     verbose: bool = True,
 ) -> dict:
-    client = load_target_auth_client(target_client_name, verbose=verbose)
+    client = load_target_auth_client(
+        target_client_name, auth_clients_fname=auth_clients_fname, verbose=verbose
+    )
 
     _ = get_url_to_visit_for_auth_code(client["id"], verbose=verbose)
 

@@ -42,9 +42,11 @@ def load_auth_clients(fname: str = None) -> list[dict[str, str | None]]:
 
 
 def load_target_auth_client(
-    target_client_name: str = "launcherAppClient2", verbose: bool = True
+    target_client_name: str = "launcherAppClient2",
+    auth_clients_fname: str = None,
+    verbose: bool = True,
 ) -> dict[str, str | None]:
-    auth_clients = load_auth_clients()
+    auth_clients = load_auth_clients(fname=auth_clients_fname)
     relevant_clients = [c for c in auth_clients if c["name"] == target_client_name]
 
     if len(relevant_clients) > 0:

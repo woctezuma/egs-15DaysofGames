@@ -113,12 +113,14 @@ if __name__ == "__main__":
     parent_dir = "../"
     cookie_name = parent_dir + get_epic_cookie_file_name()
     auth_clients_fname = parent_dir + get_auth_client_filename()
+    verbose = True
 
     target_client_name = "launcherAppClient2"
     rely_on_oauth_basic = False
     ask_for_long_token = True
-    authorization_code = get_authorization_code(cookie_fname=cookie_name, verbose=True)
-    verbose = True
+    authorization_code = get_authorization_code(
+        cookie_fname=cookie_name, verbose=verbose
+    )
 
     data = query_graphql_while_auth(
         target_client_name=target_client_name,

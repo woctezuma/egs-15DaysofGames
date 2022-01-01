@@ -594,6 +594,44 @@ class TestAuthUtils(TestCase):
         self.assertIn("Authorization", headers.keys())
         self.assertDictEqual(headers, expected_headers)
 
+    def test_get_cookies(self):
+        cookies = src.auth_utils.get_cookies(
+            authorization_code="hello",
+            access_token="world",
+            verbose=True,
+        )
+        self.assertDictEqual(cookies, {"EPIC_BEARER_TOKEN": "world"})
+        cookies = src.auth_utils.get_cookies(
+            authorization_code="", access_token="world"
+        )
+        self.assertDictEqual(cookies, {"EPIC_BEARER_TOKEN": "world"})
+        cookies = src.auth_utils.get_cookies(
+            authorization_code=None, access_token="world"
+        )
+        self.assertDictEqual(cookies, {"EPIC_BEARER_TOKEN": "world"})
+        cookies = src.auth_utils.get_cookies(
+            authorization_code="hello",
+            access_token="",
+            verbose=True,
+        )
+        self.assertDictEqual(cookies, {"EPIC_BEARER_TOKEN": "hello"})
+        cookies = src.auth_utils.get_cookies(
+            authorization_code="hello", access_token=None
+        )
+        self.assertDictEqual(cookies, {"EPIC_BEARER_TOKEN": "hello"})
+        cookies = src.auth_utils.get_cookies(
+            authorization_code="",
+            access_token="",
+            verbose=True,
+        )
+        self.assertEqual(len(cookies), 0)
+        cookies = src.auth_utils.get_cookies(authorization_code="", access_token=None)
+        self.assertEqual(len(cookies), 0)
+        cookies = src.auth_utils.get_cookies(authorization_code=None, access_token="")
+        self.assertEqual(len(cookies), 0)
+        cookies = src.auth_utils.get_cookies(authorization_code=None, access_token=None)
+        self.assertEqual(len(cookies), 0)
+
     def test_get_simple_json_query(self):
         json_query = src.auth_utils.get_simple_json_query()
         self.assertIn("query", json_query.keys())

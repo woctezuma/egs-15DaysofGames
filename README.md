@@ -43,9 +43,10 @@ NB: cookie information is required to be able to receive a temporary authorizati
 <p>
 
 1. Make sure you are connected to your [Epic Games][epic-games-store-login] account,<br/>
-2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools,<br/>
-3. Use the filtering option to find the cookie value for `EPIC_BEARER_TOKEN`,<br/>
-4. Copy-paste this cookie value into a new file called `data/personal_info.json`:<br/>
+2. Visit [`epicgames.com/id/api/`][egs-cookie] to trigger the creation of a cookie value for `EPIC_BEARER_TOKEN`,<br/>
+3. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools,<br/>
+4. Use the filtering option to find the cookie value for `EPIC_BEARER_TOKEN`,<br/>
+5. Copy-paste this cookie value into a new file called `data/personal_info.json`:<br/>
 
 ```json
 {
@@ -96,6 +97,7 @@ GraphQL advice:
 
 [python-download-url]: <https://www.python.org/downloads/>
 [epic-games-store-login]: <https://www.epicgames.com/login>
+[egs-cookie]: < https://www.epicgames.com/id/api/redirect?clientId=319e1527d0be4457a1067829fc0ad86e&responseType=code>
 
 [wiki-results]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Upcoming-Promotions>
 [wiki-graphql]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/GraphQL>

@@ -44,12 +44,12 @@ NB: cookie information is required to be able to receive a temporary authorizati
 
 1. Make sure you are connected to your [Epic Games][epic-games-store-login] account,<br/>
 2. Press `<Shift-F9>` in your web browser to access the storage section of the developer tools,<br/>
-3. Use the filtering option to find the cookie value for `EPIC_SESSION_AP`,<br/>
+3. Use the filtering option to find the cookie value for `EPIC_BEARER_TOKEN`,<br/>
 4. Copy-paste this cookie value into a new file called `data/personal_info.json`:<br/>
 
 ```json
 {
-    "EPIC_SESSION_AP": "PASTE_YOUR_COOKIE_VALUE_HERE"
+  "EPIC_BEARER_TOKEN": "PASTE_YOUR_COOKIE_VALUE_HERE"
 }  
 ```
 

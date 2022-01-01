@@ -115,15 +115,15 @@ if __name__ == "__main__":
     auth_clients_fname = parent_dir + get_auth_client_filename()
 
     target_client_name = "launcherAppClient2"
-    ask_for_long_token = True
     rely_on_oauth_basic = False
+    ask_for_long_token = True
     authorization_code = get_authorization_code(cookie_fname=cookie_name, verbose=True)
     verbose = True
 
     data = query_graphql_while_auth(
         target_client_name=target_client_name,
-        ask_for_long_token=ask_for_long_token,
         rely_on_oauth_basic=rely_on_oauth_basic,
+        ask_for_long_token=ask_for_long_token,
         authorization_code=authorization_code,
         auth_clients_fname=auth_clients_fname,
         verbose=verbose,

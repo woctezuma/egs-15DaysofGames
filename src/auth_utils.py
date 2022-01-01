@@ -61,6 +61,28 @@ def get_headers(access_token: str | None = "") -> dict[str, str]:
     return headers
 
 
+def get_cookies(
+    authorization_code: str | None, access_token: str | None, verbose: bool = True
+) -> dict[str, str]:
+    # References:
+    # - https://github.com/woctezuma/egs-15DaysofGames/issues/3
+    # - https://github.com/MixV2/EpicResearch/issues/89#issuecomment-1003520859
+
+    if access_token is None or len(access_token) == 0:
+        if authorization_code is None or len(authorization_code) == 0:
+            cookies = {}
+        else:
+            cookies = dict(EPIC_BEARER_TOKEN=authorization_code)
+            if verbose:
+                print("Using authorization code in a cookie field.")
+    else:
+        cookies = dict(EPIC_BEARER_TOKEN=access_token)
+        if verbose:
+            print("Using access token in a cookie field.")
+
+    return cookies
+
+
 def get_simple_json_query() -> dict[str, str]:
     json_query = dict(
         query="{ Catalog { searchStore(count:3, start: 0) { paging {total} elements {title} } } }"
@@ -95,6 +117,7 @@ def query_graphql_while_auth(
         url=get_egs_url(),
         json=get_simple_json_query(),
         headers=get_headers(access_token),
+        cookies=get_cookies(authorization_code, access_token, verbose=verbose),
     )
 
     if r.ok:

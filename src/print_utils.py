@@ -2,9 +2,9 @@ from src.filter_utils import get_promo_str
 from src.sort_utils import get_sorted_promos
 
 
-def get_meta_data(element: dict[str, dict], check_upcoming_promos: bool) -> dict:
+def get_meta_data(element: dict[str, dict], check_upcoming_promos: bool) -> list[dict]:
     promo_str = get_promo_str(check_upcoming_promos)
-    meta_data = element["promotions"][promo_str][0]["promotionalOffers"][0]
+    meta_data = element["promotions"][promo_str][0]["promotionalOffers"]
 
     return meta_data
 
@@ -39,7 +39,7 @@ def print_promos(
 ) -> bool:
     for e in get_sorted_promos(filtered_promos, check_upcoming_promos):
         name = e["title"]
-        meta_data = get_meta_data(e, check_upcoming_promos)
+        meta_data = get_meta_data(e, check_upcoming_promos)[0]
 
         start_date = trim_date(meta_data["startDate"])
         end_date = trim_date(meta_data["endDate"])

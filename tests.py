@@ -314,11 +314,11 @@ class TestPrintUtilsMethods(TestCase):
                 "upcomingPromotionalOffers": [{"promotionalOffers": ["hello"]}]
             }
         }
-        self.assertEqual(src.print_utils.get_meta_data(element, True), "hello")
+        self.assertEqual(src.print_utils.get_meta_data(element, True), ["hello"])
         element = {
             "promotions": {"promotionalOffers": [{"promotionalOffers": ["hello"]}]}
         }
-        self.assertEqual(src.print_utils.get_meta_data(element, False), "hello")
+        self.assertEqual(src.print_utils.get_meta_data(element, False), ["hello"])
 
     def test_trim_date(self):
         dummy_date = "2021-12-18T16:00:00.000Z"

@@ -39,13 +39,14 @@ def print_promos(
 ) -> bool:
     for e in get_sorted_promos(filtered_promos, check_upcoming_promos):
         name = e["title"]
-        meta_data = get_meta_data(e, check_upcoming_promos)[0]
+        meta_data = get_meta_data(e, check_upcoming_promos)
 
-        start_date = trim_date(meta_data["startDate"])
-        end_date = trim_date(meta_data["endDate"])
-        discount = to_discount_value(meta_data["discountSetting"]["discountPercentage"])
-        symbol = to_discount_symbol(meta_data["discountSetting"]["discountType"])
+        for promotional_offer in meta_data:
+            start_date = trim_date(promotional_offer["startDate"])
+            end_date = trim_date(promotional_offer["endDate"])
+            discount = to_discount_value(promotional_offer["discountSetting"]["discountPercentage"])
+            symbol = to_discount_symbol(promotional_offer["discountSetting"]["discountType"])
 
-        print(f"- [ {discount:3d}{symbol} off ] {start_date} -> {end_date} : {name}")
+            print(f"- [ {discount:3d}{symbol} off ] {start_date} -> {end_date} : {name}")
 
     return True

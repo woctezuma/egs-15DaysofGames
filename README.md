@@ -105,7 +105,7 @@ GraphQL advice:
 [wiki-investigation]: <https://github.com/woctezuma/egs-15DaysofGames/wiki/Investigation>
 
 [egs-api-python]: <https://github.com/SD4RK/epicstore_api>
-[egs-api-graphql]: <https://github.com/ToutinRoger/FortniteFovChanger>
+[egs-api-graphql]: <https://github.com/Tectors/EpicGraphQL>
 [egs-api-clients]: <https://github.com/MixV2/EpicResearch>
 [egs-api-hosts]: <https://github.com/derrod/legendary>
 [egs-api-token]: <https://github.com/derrod/legendary/blob/master/legendary/api/egs.py>

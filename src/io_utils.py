@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 def get_output_filename() -> str:
@@ -10,7 +11,7 @@ def load_promos(fname: str = None) -> list[dict]:
     if fname is None:
         fname = get_output_filename()
 
-    with open(fname, encoding="utf8") as f:
+    with Path(fname).open(encoding="utf8") as f:
         data = json.load(f)
 
     return data
@@ -20,7 +21,7 @@ def save_promos(data: list[dict], fname: str = None) -> None:
     if fname is None:
         fname = get_output_filename()
 
-    with open(fname, "w", encoding="utf8") as f:
+    with Path(fname).open("w", encoding="utf8") as f:
         json.dump(data, f)
 
     return
@@ -35,7 +36,7 @@ def load_auth_clients(fname: str = None) -> list[dict[str, str | None]]:
     if fname is None:
         fname = get_auth_client_filename()
 
-    with open(fname, encoding="utf-8") as f:
+    with Path(fname).open(encoding="utf-8") as f:
         data = json.load(f)
 
     return data
@@ -68,7 +69,7 @@ def load_epic_cookie_from_disk(fname: str = None) -> dict[str, str]:
         fname = get_epic_cookie_file_name()
 
     try:
-        with open(fname, encoding="utf-8") as f:
+        with Path(fname).open(encoding="utf-8") as f:
             cookie = json.load(f)
     except FileNotFoundError:
         cookie = {}

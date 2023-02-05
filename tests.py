@@ -263,7 +263,7 @@ class TestSortUtilsMethods(TestCase):
                 {"endDate": "hello", "startDate": "N/A"},
                 {"endDate": "N/A", "startDate": "N/A"},
             ]
-            for e, expected_output in zip(s, expected_results):
+            for e, expected_output in zip(s, expected_results, strict=True):
                 for date_bound in ["endDate", "startDate"]:
                     output = e["promotions"][promo_str][0]["promotionalOffers"][0]
                     self.assertEqual(

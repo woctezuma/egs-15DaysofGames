@@ -1,6 +1,6 @@
 import requests
 
-from src.io_utils import load_epic_cookie_from_disk, get_epic_cookie_file_name
+from src.io_utils import get_epic_cookie_file_name, load_epic_cookie_from_disk
 
 
 def get_egs_auth_url() -> str:

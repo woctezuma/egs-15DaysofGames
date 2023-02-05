@@ -1,6 +1,6 @@
 import requests
 
-from src.auth_code_utils import get_url_to_visit_for_auth_code, get_authorization_code
+from src.auth_code_utils import get_authorization_code, get_url_to_visit_for_auth_code
 from src.auth_token_utils import (
     get_access_token_with_authorization_code,
     get_access_token_with_client_credentials,
@@ -8,9 +8,9 @@ from src.auth_token_utils import (
 )
 from src.download_utils import get_egs_url
 from src.io_utils import (
-    load_target_auth_client,
-    get_epic_cookie_file_name,
     get_auth_client_filename,
+    get_epic_cookie_file_name,
+    load_target_auth_client,
 )
 
 
@@ -74,11 +74,11 @@ def get_cookies(
         if authorization_code is None or len(authorization_code) == 0:
             cookies = {}
         else:
-            cookies = dict(EPIC_BEARER_TOKEN=authorization_code)
+            cookies = {"EPIC_BEARER_TOKEN": authorization_code}
             if verbose:
                 print("Using authorization code in a cookie field.")
     else:
-        cookies = dict(EPIC_BEARER_TOKEN=access_token)
+        cookies = {"EPIC_BEARER_TOKEN": access_token}
         if verbose:
             print("Using access token in a cookie field.")
 
@@ -86,9 +86,9 @@ def get_cookies(
 
 
 def get_simple_json_query() -> dict[str, str]:
-    json_query = dict(
-        query="{ Catalog { searchStore(count:3, start: 0) { paging {total} elements {title} } } }",
-    )
+    json_query = {
+        "query": "{ Catalog { searchStore(count:3, start: 0) { paging {total} elements {title} } } }",
+    }
 
     return json_query
 

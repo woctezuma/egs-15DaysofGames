@@ -525,10 +525,7 @@ class TestAuthTokenUtilsMethods(TestCase):
                 )
                 self.assertIsNotNone(access_token)
                 self.assertGreater(len(access_token), 0)
-                if ask_for_long_token:
-                    expected_access_token_length = 1112
-                else:
-                    expected_access_token_length = 32
+                expected_access_token_length = 1112 if ask_for_long_token else 32
                 self.assertEqual(len(access_token), expected_access_token_length)
 
     def test_get_access_token_with_authorization_code(self):

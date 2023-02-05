@@ -27,10 +27,7 @@ def to_discount_value(price_multiplier_in_percent: int) -> int:
 
 
 def to_discount_symbol(discount_type: str) -> str:
-    if discount_type == "PERCENTAGE":
-        discount_symbol = "%"
-    else:
-        discount_symbol = "???"
+    discount_symbol = "%" if discount_type == "PERCENTAGE" else "???"
     return discount_symbol
 
 

@@ -10,7 +10,7 @@ def load_promos(fname: str = None) -> list[dict]:
     if fname is None:
         fname = get_output_filename()
 
-    with open(fname, "r", encoding="utf8") as f:
+    with open(fname, encoding="utf8") as f:
         data = json.load(f)
 
     return data
@@ -35,7 +35,7 @@ def load_auth_clients(fname: str = None) -> list[dict[str, str | None]]:
     if fname is None:
         fname = get_auth_client_filename()
 
-    with open(fname, "r", encoding="utf-8") as f:
+    with open(fname, encoding="utf-8") as f:
         data = json.load(f)
 
     return data
@@ -49,10 +49,7 @@ def load_target_auth_client(
     auth_clients = load_auth_clients(fname=auth_clients_fname)
     relevant_clients = [c for c in auth_clients if c["name"] == target_client_name]
 
-    if len(relevant_clients) > 0:
-        first_client = relevant_clients[0]
-    else:
-        first_client = {}
+    first_client = relevant_clients[0] if len(relevant_clients) > 0 else {}
 
     if verbose:
         print(first_client)
@@ -71,10 +68,10 @@ def load_epic_cookie_from_disk(fname: str = None) -> dict[str, str]:
         fname = get_epic_cookie_file_name()
 
     try:
-        with open(fname, "r", encoding="utf-8") as f:
+        with open(fname, encoding="utf-8") as f:
             cookie = json.load(f)
     except FileNotFoundError:
-        cookie = dict()
+        cookie = {}
 
     return cookie
 

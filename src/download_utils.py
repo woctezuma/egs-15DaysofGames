@@ -19,10 +19,7 @@ def get_egs_query(cursor: int = 0, step: int = None, include_dlc: bool = False) 
     if step is None:
         step = params["count"]
 
-    if include_dlc:
-        category_str = ""
-    else:
-        category_str = f'category: {params["category"]}, '
+    category_str = "" if include_dlc else f"category: {params['category']}, "
 
     prefix = "{Catalog {searchStore"
     param_str = f"({category_str}count: {step}, start: {cursor})"

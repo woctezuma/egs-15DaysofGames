@@ -6,17 +6,17 @@ from requests.auth import HTTPBasicAuth
 
 def get_egs_hosts() -> dict[str, str]:
     # Reference: https://github.com/derrod/legendary/blob/master/legendary/api/egs.py
-    egs_hosts = dict(
-        _oauth_host="account-public-service-prod.ol.epicgames.com",
-        _launcher_host="launcher-public-service-prod.ol.epicgames.com",
-        _entitlements_host="entitlement-public-service-prod.ol.epicgames.com",
-        _catalog_host="catalog-public-service-prod.ol.epicgames.com",
-        _ecommerce_host="ecommerceintegration-public-service-ecomprod.ol.epicgames.com",
-        _datastorage_host="datastorage-public-service-liveegs.live.use1a.on.epicgames.com",
-        _library_host="library-service.live.use1a.on.epicgames.com",
-        _store_gql_host="store-launcher.epicgames.com",
-        _artifact_service_host="artifact-public-service-prod.beee.live.use1a.on.epicgames.com",
-    )
+    egs_hosts = {
+        "_oauth_host": "account-public-service-prod.ol.epicgames.com",
+        "_launcher_host": "launcher-public-service-prod.ol.epicgames.com",
+        "_entitlements_host": "entitlement-public-service-prod.ol.epicgames.com",
+        "_catalog_host": "catalog-public-service-prod.ol.epicgames.com",
+        "_ecommerce_host": "ecommerceintegration-public-service-ecomprod.ol.epicgames.com",
+        "_datastorage_host": "datastorage-public-service-liveegs.live.use1a.on.epicgames.com",
+        "_library_host": "library-service.live.use1a.on.epicgames.com",
+        "_store_gql_host": "store-launcher.epicgames.com",
+        "_artifact_service_host": "artifact-public-service-prod.beee.live.use1a.on.epicgames.com",
+    }
 
     return egs_hosts
 

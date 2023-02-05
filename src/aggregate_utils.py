@@ -1,4 +1,4 @@
-from src.download_utils import get_default_params, download_store_data
+from src.download_utils import download_store_data, get_default_params
 from src.search_utils import find_title
 
 

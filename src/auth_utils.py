@@ -62,7 +62,9 @@ def get_headers(access_token: str | None = "") -> dict[str, str]:
 
 
 def get_cookies(
-    authorization_code: str | None, access_token: str | None, verbose: bool = True
+    authorization_code: str | None,
+    access_token: str | None,
+    verbose: bool = True,
 ) -> dict[str, str]:
     # References:
     # - https://github.com/woctezuma/egs-15DaysofGames/issues/3
@@ -85,7 +87,7 @@ def get_cookies(
 
 def get_simple_json_query() -> dict[str, str]:
     json_query = dict(
-        query="{ Catalog { searchStore(count:3, start: 0) { paging {total} elements {title} } } }"
+        query="{ Catalog { searchStore(count:3, start: 0) { paging {total} elements {title} } } }",
     )
 
     return json_query
@@ -100,7 +102,9 @@ def query_graphql_while_auth(
     verbose: bool = True,
 ) -> dict:
     client = load_target_auth_client(
-        target_client_name, auth_clients_fname=auth_clients_fname, verbose=verbose
+        target_client_name,
+        auth_clients_fname=auth_clients_fname,
+        verbose=verbose,
     )
 
     _ = get_url_to_visit_for_auth_code(client["id"], verbose=verbose)
@@ -142,7 +146,8 @@ if __name__ == "__main__":
     rely_on_oauth_basic = False
     ask_for_long_token = True
     authorization_code = get_authorization_code(
-        cookie_fname=cookie_name, verbose=verbose
+        cookie_fname=cookie_name,
+        verbose=verbose,
     )
 
     data = query_graphql_while_auth(

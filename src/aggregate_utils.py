@@ -13,10 +13,16 @@ def extract_num_promos_from_metadata(store_data: dict) -> int:
 
 
 def download_all_promos(
-    include_dlc: bool = False, auth_code: str = None, verbose: bool = True
+    include_dlc: bool = False,
+    auth_code: str = None,
+    verbose: bool = True,
 ) -> list[dict]:
     dummy_store_data = download_store_data(
-        cursor=0, step=1, include_dlc=include_dlc, auth_code=auth_code, verbose=verbose
+        cursor=0,
+        step=1,
+        include_dlc=include_dlc,
+        auth_code=auth_code,
+        verbose=verbose,
     )
     total_num_promos = extract_num_promos_from_metadata(dummy_store_data)
 

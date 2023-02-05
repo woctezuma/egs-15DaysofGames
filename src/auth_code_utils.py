@@ -35,7 +35,9 @@ def get_url_to_visit_for_auth_code(client_id: str = None, verbose: bool = True) 
 
 
 def get_authorization_code(
-    client_id: str = None, cookie_fname: str = None, verbose: bool = True
+    client_id: str = None,
+    cookie_fname: str = None,
+    verbose: bool = True,
 ) -> str:
     full_url = get_url_to_visit_for_auth_code(client_id=client_id, verbose=verbose)
     cookies = load_epic_cookie_from_disk(fname=cookie_fname)

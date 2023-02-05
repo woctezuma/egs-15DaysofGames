@@ -35,7 +35,8 @@ def to_discount_symbol(discount_type: str) -> str:
 
 
 def print_promos(
-        filtered_promos: list[dict], check_upcoming_promos: bool = True
+    filtered_promos: list[dict],
+    check_upcoming_promos: bool = True,
 ) -> bool:
     for e in get_sorted_promos(filtered_promos, check_upcoming_promos):
         name = e["title"]
@@ -44,9 +45,15 @@ def print_promos(
         for promotional_offer in meta_data:
             start_date = trim_date(promotional_offer["startDate"])
             end_date = trim_date(promotional_offer["endDate"])
-            discount = to_discount_value(promotional_offer["discountSetting"]["discountPercentage"])
-            symbol = to_discount_symbol(promotional_offer["discountSetting"]["discountType"])
+            discount = to_discount_value(
+                promotional_offer["discountSetting"]["discountPercentage"],
+            )
+            symbol = to_discount_symbol(
+                promotional_offer["discountSetting"]["discountType"],
+            )
 
-            print(f"- [ {discount:3d}{symbol} off ] {start_date} -> {end_date} : {name}")
+            print(
+                f"- [ {discount:3d}{symbol} off ] {start_date} -> {end_date} : {name}",
+            )
 
     return True

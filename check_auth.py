@@ -6,5 +6,6 @@ if __name__ == "__main__":
     authorization_code = get_authorization_code()
 
     data = query_graphql_while_auth(
-        target_client_name=target_client_name, authorization_code=authorization_code
+        target_client_name=target_client_name,
+        authorization_code=authorization_code,
     )

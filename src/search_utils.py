@@ -19,7 +19,9 @@ def find_title(promos: list[dict], target_game_name: str, verbose: bool = True) 
 
 
 def find_title_regex(
-    promos: list[dict], target_game_name: str, verbose: bool = True
+    promos: list[dict],
+    target_game_name: str,
+    verbose: bool = True,
 ) -> list[dict]:
     """Regex search for all matches of a game title. Credits to KonScanner."""
     matches = [

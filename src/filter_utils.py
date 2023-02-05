@@ -9,9 +9,9 @@ def get_promo_str(check_upcoming_promos: bool) -> str:
 def is_relevant_promo(element: dict[str, dict], check_upcoming_promos: bool) -> bool:
     promo_str = get_promo_str(check_upcoming_promos)
     flag = (
-            element["promotions"] is not None
-            and promo_str in element["promotions"]
-            and len(element["promotions"][promo_str]) > 0
+        element["promotions"] is not None
+        and promo_str in element["promotions"]
+        and len(element["promotions"][promo_str]) > 0
     )
 
     return flag

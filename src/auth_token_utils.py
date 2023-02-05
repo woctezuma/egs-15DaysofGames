@@ -99,7 +99,11 @@ def get_access_token_with_client_credentials(
     if ask_for_long_token:
         body_data["token_type"] = "eg1"
     access_token = get_access_token(
-        client_id, client_secret, body_data, rely_on_oauth_basic, verbose
+        client_id,
+        client_secret,
+        body_data,
+        rely_on_oauth_basic,
+        verbose,
     )
     return access_token
 
@@ -117,7 +121,11 @@ def get_access_token_with_authorization_code(
     if ask_for_long_token:
         body_data["token_type"] = "eg1"
     access_token = get_access_token(
-        client_id, client_secret, body_data, rely_on_oauth_basic, verbose
+        client_id,
+        client_secret,
+        body_data,
+        rely_on_oauth_basic,
+        verbose,
     )
     return access_token
 

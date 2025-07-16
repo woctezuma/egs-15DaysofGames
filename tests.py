@@ -40,7 +40,7 @@ class TestDownloadUtilsMethods(TestCase):
     def test_get_egs_url(self):
         self.assertEqual(
             src.download_utils.get_egs_url(),
-            "https://graphql.epicgames.com/graphql",
+            "https://store.epicgames.com/graphql",
         )
 
     def test_get_default_params(self):

@@ -2,7 +2,7 @@ import requests
 
 
 def get_egs_url() -> str:
-    return "https://store.epicgames.com/graphql"
+    return "https://graphql.epicgames.com/ue/graphql"
 
 
 def get_default_params() -> dict:

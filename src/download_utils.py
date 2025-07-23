@@ -8,7 +8,7 @@ def get_egs_url() -> str:
 def get_default_params() -> dict:
     params = {
         "category": '"games"',
-        "count": 1000,
+        "count": 40,
     }
     return params
 

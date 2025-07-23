@@ -46,7 +46,7 @@ class TestDownloadUtilsMethods(TestCase):
     def test_get_default_params(self):
         params = src.download_utils.get_default_params()
         self.assertEqual(params["category"], '"games"')
-        self.assertEqual(params["count"], 1000)
+        self.assertEqual(params["count"], 40)
 
     def test_get_egs_query(self):
         query = src.download_utils.get_egs_query()
